@@ -1,0 +1,182 @@
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Project5._Default" %>
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+    <div class="jumbotron">
+        <h1>ASU WidgetBoard</h1>
+        <p class="lead">The ASU WidgetBoard simplifies and enhances the student experience by displaying a customizable and interactive collection of widgets on a dashboard. All of the widgets are related to Arizona State University news, events, facilities, academics, clubs, and other information useful for students. Each widget utilizes a web service.</p>
+    </div>
+
+    <div>
+        <h2>Application and Component Summary Table</h2>
+        <p>The following table includes a list of our components.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4" style="text-align: center;">Application and Components Summary Table</th>
+                </tr>
+                <tr>
+                    <th colspan="4">The application is deployed at: <a href="http://webstrar29.fulton.asu/Default.aspx">http://webstrar29.fulton.asu/Default.aspx</a></th>
+                </tr>
+                <tr>
+                    <th colspan="4">Percentage of Contribution: Azaria Fowler: 50% + Kaitlyn Allen: 50%</th>
+                </tr>
+                <tr>
+                    <th>Provider Name</th>
+                    <th>Page and component types (e.g. aspx, DLL, SVC, etc.)</th>
+                    <th>Component description: What does the component do? What are input/parameter and output/return value?</th>
+                    <th>Actual resources and methods used to implement the component and where this component is used?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Presentation Layer (GUI) -->
+                <tr>
+                    <td>Azaria Fowler</td>
+                    <td>Default.aspx page</td>
+                    <td>This is the public default page that contains the application and components summary table with links to all other pages.</td>
+                    <td><u>Resources</u>: GUI design code and C# code behind GUI.
+                        <br />
+                        <u>Usage</u>: Default page for application.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Azaria Fowler</td>
+                    <td>Dashboard.aspx page</td>
+                    <td>This is the self-subscribed member page that contains the ASU WidgetBoard.</td>
+                    <td><u>Resources</u>: GUI design code, C# code behind GUI, and web services.<br />
+                        <u>Usage</u>: Member page for application.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Azaria Fowler</td>
+                    <td>Settings.aspx page</td>
+                    <td>This is the authorization-required administrator staff page that contains the configuration settings for the ASU WidgetBoard. For example, users with access to this page can configure the Horoscope.xml file for the Horoscope services called in Dashboard.aspx.</td>
+                    <td><u>Resources</u>: GUI design code, C# code behind GUI, and file writing services.<br />
+                        <u>Usage</u>: Staff page for application.
+                    </td>
+                </tr>
+                <!-- Local Component -->
+                <tr>
+                    <td>-</td>
+                    <td>Global.asax file</td>
+                    <td>-</td>
+                    <td><u>Resources</u>: -<br />
+                        <u>Usage</u>: -
+                    </td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>DLL class library module file</td>
+                    <td>-</td>
+                    <td><u>Resources</u>: -<br />
+                        <u>Usage</u>: -
+                    </td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>User control</td>
+                    <td>-</td>
+                    <td><u>Resources</u>: -<br />
+                        <u>Usage</u>: -
+                    </td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Server control</td>
+                    <td>-</td>
+                    <td><u>Resources</u>: -<br />
+                        <u>Usage</u>: -
+                    </td>
+                </tr>
+                <!-- Data Management -->
+                <tr>
+                    <td>-</td>
+                    <td>Cookie</td>
+                    <td>-</td>
+                    <td><u>Resources</u>: -<br />
+                        <u>Usage</u>: -
+                    </td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Session state</td>
+                    <td>-</td>
+                    <td><u>Resources</u>: -<br />
+                        <u>Usage</u>: -
+                    </td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>XML files</td>
+                    <td>-</td>
+                    <td><u>Resources</u>: -<br />
+                        <u>Usage</u>: -
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Service Directory</h2>
+        <p>The following table includes a list of our services as well as links to their respective TryIt pages.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5" style="text-align: center;">Service Directory</th>
+                </tr>
+                <tr>
+                    <th colspan="5">Percentage of Contribution: Azaria Fowler: 50% + Kaitlyn Allen: 50%</th>
+                </tr>
+                <tr>
+                    <th>Provider Name</th>
+                    <th>Operation Name</th>
+                    <th>Parameters and Return Type</th>
+                    <th>Function Description</th>
+                    <th>TryIt Page</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Web Services -->
+                <tr>
+                    <td>Azaria Fowler</td>
+                    <td>Stock Build</td>
+                    <td><u>Parameters</u>: N/A<br />
+                        <u>Return Type</u>: the file path to the file with the symbol price pairs
+                    </td>
+                    <td>This service utilizes stock data from Finnhub and finds the open price of each stock symbol from the US stock market. It then creates and saves a file with 50 random symbol price pairs (symbol, open price) in a file. This service returns the file path to the saved file of symbol price pairs.</td>
+                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                </tr>
+                <tr>
+                    <td>Azaria Fowler</td>
+                    <td>Stock Quote</td>
+                    <td><u>Parameters</u>: <samp>string symbol</samp><br />
+                        <u>Return Type</u>: the stock price of the symbol
+                    </td>
+                    <td>This service reads a file of symbol price pairs and returns the stock price of the given stock symbol. The user can manually type a stock symbol or a select one from a list of valid stock symbols.</td>
+                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>ASU WidgetBoard</h2>
+            <p>
+                This is the self-subscribed member page that contains the ASU WidgetBoard.
+            </p>
+            <p>
+                <a class="btn btn-default" href="Dashboard.aspx">Visit &raquo;</a>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h2>Configure Widgets</h2>
+            <p>
+                This is the authorization-required administrator staff page that contains the configuration settings for the ASU WidgetBoard.
+            </p>
+            <p>
+                <a class="btn btn-default" href="Settings.aspx">Visit &raquo;</a>
+            </p>
+        </div>
+    </div>
+
+</asp:Content>
