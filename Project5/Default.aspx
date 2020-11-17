@@ -8,12 +8,12 @@
     </div>
 
     <div>
-        <h2>Application and Component Summary Table</h2>
+        <h2>Applications and Components</h2>
         <p>The following table includes a list of our components.</p>
         <table>
             <thead>
                 <tr>
-                    <th colspan="4" style="text-align: center;">Application and Components Summary Table</th>
+                    <th colspan="4" style="text-align: center;background-color:#f8f8f8"><h3>Application and Components Summary Table</h3></th>
                 </tr>
                 <tr>
                     <th colspan="4">The application is deployed at: <a href="http://webstrar29.fulton.asu/Default.aspx">http://webstrar29.fulton.asu/Default.aspx</a></th>
@@ -24,7 +24,7 @@
                 <tr>
                     <th>Provider Name</th>
                     <th>Page and component types (e.g. aspx, DLL, SVC, etc.)</th>
-                    <th>Component description: What does the component do? What are input/parameter and output/return value?</th>
+                    <th class="description">Component description: What does the component do? What are input/parameter and output/return value?</th>
                     <th>Actual resources and methods used to implement the component and where this component is used?</th>
                 </tr>
             </thead>
@@ -48,7 +48,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Azaria Fowler</td>
+                    <td>Kaitlyn Allen</td>
                     <td>Settings.aspx page</td>
                     <td>This is the authorization-required administrator staff page that contains the configuration settings for the ASU WidgetBoard. For example, users with access to this page can configure the Horoscope.xml file for the Horoscope services called in Dashboard.aspx.</td>
                     <td><u>Resources</u>: GUI design code, C# code behind GUI, and file writing services.<br />
@@ -117,12 +117,12 @@
         </table>
     </div>
     <div>
-        <h2>Service Directory</h2>
+        <h2>Services</h2>
         <p>The following table includes a list of our services as well as links to their respective TryIt pages.</p>
         <table>
             <thead>
                 <tr>
-                    <th colspan="5" style="text-align: center;">Service Directory</th>
+                    <th colspan="5" style="text-align: center;background-color:#f8f8f8"><h3>Service Directory</h3></th>
                 </tr>
                 <tr>
                     <th colspan="5">Percentage of Contribution: Azaria Fowler: 50% + Kaitlyn Allen: 50%</th>
@@ -131,7 +131,7 @@
                     <th>Provider Name</th>
                     <th>Operation Name</th>
                     <th>Parameters and Return Type</th>
-                    <th>Function Description</th>
+                    <th class="description">Function Description</th>
                     <th>TryIt Page</th>
                 </tr>
             </thead>
@@ -150,9 +150,45 @@
                     <td>Azaria Fowler</td>
                     <td>Stock Quote</td>
                     <td><u>Parameters</u>: <samp>string symbol</samp><br />
-                        <u>Return Type</u>: the stock price of the symbol
+                        <u>Return Type</u>:  <samp>string</samp> representing the stock price of the symbol
                     </td>
                     <td>This service reads a file of symbol price pairs and returns the stock price of the given stock symbol. The user can manually type a stock symbol or a select one from a list of valid stock symbols.</td>
+                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                </tr>
+                <tr>
+                    <td>Azaria Fowler</td>
+                    <td>Daily Horoscope Reading</td>
+                    <td><u>Parameters</u>: <samp>string sign</samp><br />
+                        <u>Return Type</u>:  <samp>string</samp> representing the current horoscope reading of the sign
+                    </td>
+                    <td>This service takes a sign (i.e. capricorn, leo, etc.) and returns their current horoscope readings.</td>
+                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                </tr>
+                <tr>
+                    <td>Azaria Fowler</td>
+                    <td>Phoenix Suns' Schedule</td>
+                    <td><u>Parameters</u>: N/A<br />
+                        <u>Return Type</u>: <samp>List < string ></samp> representing a list of games involving the Phoenix Suns'
+                    </td>
+                    <td>This service returns a list of 25 most recent Phoenix Suns' games from 1960-2000.</td>
+                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                </tr>
+                <tr>
+                    <td>Kaitlyn Allen</td>
+                    <td>News Focus</td>
+                    <td><u>Parameters</u>: -<br />
+                        <u>Return Type</u>: -
+                    </td>
+                    <td>-</td>
+                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                </tr>
+                <tr>
+                    <td>Kaitlyn Allen</td>
+                    <td>Weather Service</td>
+                    <td><u>Parameters</u>: -<br />
+                        <u>Return Type</u>: -
+                    </td>
+                    <td>-</td>
                     <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
                 </tr>
             </tbody>
@@ -178,5 +214,22 @@
             </p>
         </div>
     </div>
+
+    <style>
+        td { 
+            border-bottom: 1px dotted #cccccc;
+            padding: 10px;
+        }
+
+        th {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            width: 35%;
+        }
+    </style>
 
 </asp:Content>
