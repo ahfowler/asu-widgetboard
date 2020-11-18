@@ -55,62 +55,73 @@
                         <u>Usage</u>: Staff page for application.
                     </td>
                 </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Login.aspx page</td>
+                    <td>This is the log in and register page that utilizes forms-based security for the user control.</td>
+                    <td><u>Resources</u>: GUI design code, C# code behind GUI, and the decryption/encryption function from Decryption.dll file.<br />
+                        <u>Usage</u>: Staff page for application.
+                    </td>
+                </tr>
                 <!-- Local Component -->
                 <tr>
                     <td>-</td>
                     <td>Global.asax file</td>
-                    <td>-</td>
-                    <td><u>Resources</u>: -<br />
-                        <u>Usage</u>: -
+                    <td>This file contains a global event handler that displays a welcome message and initializes the navigation bar according to wether a user is signed in.</td>
+                    <td><u>Resources</u>:  GUI design code and conditional C# code behind GUI.<br />
+                        <u>Usage</u>: This is used in Default.aspx if a user is already signed in.
                     </td>
                 </tr>
                 <tr>
                     <td>-</td>
-                    <td>DLL class library module file</td>
-                    <td>-</td>
-                    <td><u>Resources</u>: -<br />
-                        <u>Usage</u>: -
+                    <td>Encryption.dll file</td>
+                    <td>
+                        This file contains the functions for encoding and decoding usernames and passwords.
+                        <br />
+                        <b>encryptCredential()</b>
+                        <u>Parameters</u>: <samp>string credential</samp><br />
+                        <u>Return Type</u>:  <samp>string</samp> representing the encrypted credential
+
+                        <br />
+                        <b>decryptCredential()</b>
+                        <u>Parameters</u>: <samp>string encryptedCredential</samp><br />
+                        <u>Return Type</u>:  <samp>string</samp> representing the decrypted credential
                     </td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>User control</td>
-                    <td>-</td>
-                    <td><u>Resources</u>: -<br />
-                        <u>Usage</u>: -
-                    </td>
-                </tr>
-                <tr>
-                    <td>-</td>
-                    <td>Server control</td>
-                    <td>-</td>
-                    <td><u>Resources</u>: -<br />
-                        <u>Usage</u>: -
+                    <td><u>Resources</u>: C# class and methods for encryptCredential() and decryptCredential()<br />
+                        <u>Usage</u>: This is used in the Login.aspx page for verifying user-inputted credentials.
                     </td>
                 </tr>
                 <!-- Data Management -->
                 <tr>
                     <td>-</td>
-                    <td>Cookie</td>
-                    <td>-</td>
+                    <td>User profile cookie</td>
+                    <td>This cookie contains the currently logged in user's information (username and password).</td>
                     <td><u>Resources</u>: -<br />
                         <u>Usage</u>: -
                     </td>
                 </tr>
                 <tr>
                     <td>-</td>
-                    <td>Session state</td>
-                    <td>-</td>
+                    <td>Zodiac sign session state</td>
+                    <td>This is a temprary state that contains the previously selected zodiac sign within a session.</td>
                     <td><u>Resources</u>: -<br />
                         <u>Usage</u>: -
                     </td>
                 </tr>
                 <tr>
                     <td>-</td>
-                    <td>XML files</td>
+                    <td>Students.xml file</td>
+                    <td>This file contains all of the usernames and passwords of self-registered students that can use the ASU WidgetBoard.</td>
+                    <td><u>Resources</u>: A plain text file written in XML language. <br />
+                        <u>Usage</u>: This is linked to the Login.aspx page and the encrpytion/decryption function.
+                    </td>
+                </tr>
+                <tr>
                     <td>-</td>
-                    <td><u>Resources</u>: -<br />
-                        <u>Usage</u>: -
+                    <td>Admins.xml file</td>
+                    <td>This file contains all of the usernames and passwords of pre-approved admins that can edit the contents of the ASU WidgetBoard.</td>
+                    <td><u>Resources</u>: A plain text file written in XML language. <br />
+                        <u>Usage</u>: This is linked to the Login.aspx page and the encrpytion/decryption function.
                     </td>
                 </tr>
             </tbody>
