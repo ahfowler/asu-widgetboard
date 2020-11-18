@@ -107,10 +107,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\DailyHoroscope\Service.wsdl" />
+    <None Include="Connected Services\DailyHoroscope\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DailyHoroscope\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\StockBuildAndQuote\Service.disco" />
     <None Include="Connected Services\StockBuildAndQuote\configuration91.svcinfo" />
     <None Include="Connected Services\StockBuildAndQuote\configuration.svcinfo" />
     <None Include="Connected Services\StockBuildAndQuote\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\DailyHoroscope\Service.disco" />
+    <None Include="Connected Services\DailyHoroscope\configuration91.svcinfo" />
+    <None Include="Connected Services\DailyHoroscope\configuration.svcinfo" />
+    <None Include="Connected Services\DailyHoroscope\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -177,6 +191,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Connected Services\DailyHoroscope\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\StockBuildAndQuote\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -248,6 +267,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\DailyHoroscope\" />
     <WCFMetadataStorage Include="Connected Services\StockBuildAndQuote\" />
   </ItemGroup>
   <PropertyGroup>

@@ -42,12 +42,48 @@ namespace Project5
         protected global::System.Web.UI.WebControls.Table SunsSchedule;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// horoscopeImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.Image horoscopeImage;
+
+        /// <summary>
+        /// horoscopeSign control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label horoscopeSign;
+
+        /// <summary>
+        /// horoscopeDropDown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList horoscopeDropDown;
+
+        /// <summary>
+        /// submitHoroscope control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button submitHoroscope;
+
+        /// <summary>
+        /// horoscopeReading control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label horoscopeReading;
     }
 }

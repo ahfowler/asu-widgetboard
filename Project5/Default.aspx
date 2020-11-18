@@ -78,12 +78,11 @@
                     <td>
                         This file contains the functions for encoding and decoding usernames and passwords.
                         <br />
-                        <b>encryptCredential()</b>
+                        <b>encryptCredential()</b><br />
                         <u>Parameters</u>: <samp>string credential</samp><br />
                         <u>Return Type</u>:  <samp>string</samp> representing the encrypted credential
-
                         <br />
-                        <b>decryptCredential()</b>
+                        <b>decryptCredential()</b><br />
                         <u>Parameters</u>: <samp>string encryptedCredential</samp><br />
                         <u>Return Type</u>:  <samp>string</samp> representing the decrypted credential
                     </td>

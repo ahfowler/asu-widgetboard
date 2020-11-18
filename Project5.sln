@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project5", "Project5\Project5.csproj", "{EFF7FF75-9ED8-442D-AAEC-1AB55D8C3890}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4CFA48C0-EF8A-4214-994C-198633F7E794} = {4CFA48C0-EF8A-4214-994C-198633F7E794}
+		{BA3C73FC-7008-4E88-8B8E-730C3F2DB0B6} = {BA3C73FC-7008-4E88-8B8E-730C3F2DB0B6}
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "StockBuildAndQuote", "StockBuildAndQuote\", "{4CFA48C0-EF8A-4214-994C-198633F7E794}"
@@ -30,6 +31,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "StockBuildAndQuote", "Stock
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DailyHoroscope", "DailyHoroscope\", "{BA3C73FC-7008-4E88-8B8E-730C3F2DB0B6}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_59666"
+		Debug.AspNetCompiler.PhysicalPath = "DailyHoroscope\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59666\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_59666"
+		Release.AspNetCompiler.PhysicalPath = "DailyHoroscope\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59666\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59666"
+		SlnRelativePath = "DailyHoroscope\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +67,10 @@ Global
 		{4CFA48C0-EF8A-4214-994C-198633F7E794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CFA48C0-EF8A-4214-994C-198633F7E794}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{4CFA48C0-EF8A-4214-994C-198633F7E794}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BA3C73FC-7008-4E88-8B8E-730C3F2DB0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3C73FC-7008-4E88-8B8E-730C3F2DB0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3C73FC-7008-4E88-8B8E-730C3F2DB0B6}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3C73FC-7008-4E88-8B8E-730C3F2DB0B6}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

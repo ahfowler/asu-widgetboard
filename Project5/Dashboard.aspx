@@ -34,43 +34,43 @@
                 </div>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 15px;">
-                <div style="background-color: #cccccc; text-align: center; padding: 10px; border-radius: 5px;">
+                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
                     <h5><b>MONDAY</b></h5>
                     <hr />
                     <h3>45&#176</h3>
                     <h5>54&#176 / 89&#176</h5>
                 </div>
-                <div style="background-color: #cccccc; text-align: center; padding: 10px; border-radius: 5px;">
+                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
                     <h5><b>TUESDAY</b></h5>
                     <hr />
                     <h3>45&#176</h3>
                     <h5>54&#176 / 89&#176</h5>
                 </div>
-                <div style="background-color: #cccccc; text-align: center; padding: 10px; border-radius: 5px;">
+                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
                     <h5><b>WEDNESDAY</b></h5>
                     <hr />
                     <h3>45&#176</h3>
                     <h5>54&#176 / 89&#176</h5>
                 </div>
-                <div style="background-color: #cccccc; text-align: center; padding: 10px; border-radius: 5px;">
+                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
                     <h5><b>THURSDAY</b></h5>
                     <hr />
                     <h3>45&#176</h3>
                     <h5>54&#176 / 89&#176</h5>
                 </div>
-                <div style="background-color: #cccccc; text-align: center; padding: 10px; border-radius: 5px;">
+                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
                     <h5><b>FRIDAY</b></h5>
                     <hr />
                     <h3>45&#176</h3>
                     <h5>54&#176 / 89&#176</h5>
                 </div>
-                <div style="background-color: #cccccc; text-align: center; padding: 10px; border-radius: 5px;">
+                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
                     <h5><b>SATURDAY</b></h5>
                     <hr />
                     <h3>45&#176</h3>
                     <h5>54&#176 / 89&#176</h5>
                 </div>
-                <div style="background-color: #cccccc; text-align: center; padding: 10px; border-radius: 5px;">
+                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
                     <h5><b>SUNDAY</b></h5>
                     <hr />
                     <h3>45&#176</h3>
@@ -81,7 +81,7 @@
     </div>
 
     <div style="display: flex;justify-content: space-between;">
-        <div style="background-color: lightgray; text-align: center; padding: 10px; border-radius: 5px;max-width:30%;">
+        <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;max-width:30%;">
             <h3>ASU News</h3>
             <!-- https://rapidapi.com/webit/api/webit-news-search -->
             <div style="max-height: 375px; overflow-y: scroll; margin-bottom: 20px; margin-top: 20px;">
@@ -90,7 +90,7 @@
                 </asp:Table>
             </div>
         </div>
-        <div style="background-color: lightgray; text-align: center; padding: 10px; border-radius: 5px;min-width:35%;">
+        <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;min-width:35%;">
             <h3>Phoenix Suns' Schedule</h3>
             <div style="max-height: 375px; overflow-y: scroll; margin-bottom: 20px; margin-top: 20px;">
                 <asp:Table ID="SunsSchedule" runat="server"
@@ -99,19 +99,31 @@
             </div>
             </div>
 
-        <div style="background-color: lightgray; text-align: center; padding: 10px; border-radius: 5px;max-width:30%;">
+        <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;max-width:30%;">
             <h3>Daily Horoscope</h3>
-            <div style="text-align: center;">
-                <img src="https://www.flaticon.com/svg/static/icons/svg/2647/2647369.svg" style="max-height: 100px;" />
-                <h5>Capricorn</h5>
+            <div style="text-align: center;min-height: 375px;">
+                <asp:Image style="max-height: 100px;" ID="horoscopeImage" runat="server" ImageUrl="https://www.flaticon.com/svg/static/icons/svg/2647/2647369.svg" />
+                <h5><asp:Label ID="horoscopeSign" runat="server" Text=""></asp:Label></h5>
                 <hr />
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="horoscopeDropDown" runat="server">
                     <asp:ListItem Value="Aries"></asp:ListItem>
                     <asp:ListItem Value="Taurus"></asp:ListItem>
+                    <asp:ListItem Value="Gemini"></asp:ListItem>
+                    <asp:ListItem Value="Cancer"></asp:ListItem>
+                    <asp:ListItem Value="Leo"></asp:ListItem>
+                    <asp:ListItem Value="Virgo"></asp:ListItem>
+                    <asp:ListItem Value="Libra"></asp:ListItem>
+                    <asp:ListItem Value="Scorpio"></asp:ListItem>
+                    <asp:ListItem Value="Sagittarius"></asp:ListItem>
+                    <asp:ListItem Value="Capricorn"></asp:ListItem>
+                    <asp:ListItem Value="Aquarius"></asp:ListItem>
+                    <asp:ListItem Value="Pisces"></asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <asp:Button class="btn btn-default" ID="submitHoroscope" runat="server" Text="Submit" OnClick="submitHoroscope_Click" />
                 <hr />
                 <p>
-                    A little romantic time with your special someone may be in order today, Capricorn. With the day-to-day chaos of working and living, it can be tough to get some quality time alone. If you don't make specific plans, it can be months before this happens. Take the situation in hand and make those plans. If you're single, consider making arrangements for a date or spending time with a friend, if possible.
+                    <asp:Label ID="horoscopeReading" runat="server" Text=""></asp:Label>
                 </p>
             </div>
         </div>

@@ -99,6 +99,20 @@ namespace Project5
 
                 SunsSchedule.Rows.Add(r);
             }
+
+            // Initialize horoscope widget
+            DailyHoroscope.ServiceClient horoscopeProxy = new DailyHoroscope.ServiceClient();
+            horoscopeReading.Text = horoscopeProxy.getHoroscopeReading("Aries");
+            horoscopeSign.Text = "Aries";
+            horoscopeImage.ImageUrl = horoscopeProxy.getHoroscopeImage("Aries");
+        }
+
+        protected void submitHoroscope_Click(object sender, EventArgs e)
+        {
+            DailyHoroscope.ServiceClient horoscopeProxy = new DailyHoroscope.ServiceClient();
+            horoscopeReading.Text = horoscopeProxy.getHoroscopeReading(horoscopeDropDown.Text);
+            horoscopeSign.Text = horoscopeDropDown.Text;
+            horoscopeImage.ImageUrl = horoscopeProxy.getHoroscopeImage(horoscopeDropDown.Text);
         }
     }
 }

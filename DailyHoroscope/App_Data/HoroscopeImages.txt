@@ -1,0 +1,12 @@
+﻿Aries; https://www.flaticon.com/svg/static/icons/svg/2647/2647338.svg
+Taurus; https://www.flaticon.com/svg/static/icons/svg/2647/2647460.svg
+Gemini; https://www.flaticon.com/svg/static/icons/svg/2647/2647394.svg
+Cancer; https://www.flaticon.com/svg/static/icons/svg/2647/2647365.svg
+Leo; https://www.flaticon.com/svg/static/icons/svg/2647/2647401.svg
+Virgo; https://www.flaticon.com/svg/static/icons/svg/2647/2647462.svg
+Libra; https://www.flaticon.com/svg/static/icons/svg/2647/2647405.svg
+Scorpio; https://www.flaticon.com/svg/static/icons/svg/2647/2647441.svg
+Sagittarius; https://www.flaticon.com/svg/static/icons/svg/2647/2647433.svg
+Capricorn; https://www.flaticon.com/svg/static/icons/svg/2647/2647369.svg
+Aquarius; https://www.flaticon.com/svg/static/icons/svg/2647/2647332.svg
+Pisces; https://www.flaticon.com/svg/static/icons/svg/2647/2647424.svg
