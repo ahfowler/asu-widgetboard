@@ -70,28 +70,16 @@ namespace Project5
             }
 
             // Dynamically create sun's schedule
-            for (int i = 0; i < numberOfRows; i++)
+            PhoenixSunsSchedule.ServiceClient phoenixSunsProxy = new PhoenixSunsSchedule.ServiceClient();
+            List<string> schedule = phoenixSunsProxy.getSchedule();
+
+            for (int i = 0; i < schedule.Count; i++)
             {
                 TableRow r = new TableRow();
                 TableCell c = new TableCell();
 
                 LiteralControl newsElement = new LiteralControl();
-                newsElement.Text += @"<div>
-                <b>November 16th, 2020</b><br />
-                <div style='display: flex; justify-content: space-around; align-items:center;'>
-                    <div style='max-width: 60px;'>
-                        <img src='https://logos-download.com/wp-content/uploads/2018/04/Phoenix_Suns_logo_colour.png' style='max-width: 50px;'/><br /><p>Phoenix Suns</p>
-                    </div>
-                    <h2>112</h2>
-                    <div style='margin:10px;'></div>
-                    <h2>113</h2>
-                    <div style='max-width: 60px;'>
-                        <img src='https://logos-download.com/wp-content/uploads/2016/04/Los_Angeles_Lakers_logo_logotype_emblem-700x447.png' style='max-width: 50px;'/><br /><p>Los Angeles Lakers</p>
-                    </div>
-                </div>
-                <p>FINAL SCORE</p>
-                <hr />
-            </div>";
+                newsElement.Text += schedule[i];
 
                 c.Controls.Add(newsElement);
 
