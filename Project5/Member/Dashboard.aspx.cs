@@ -88,6 +88,30 @@ namespace Project5
                 SunsSchedule.Rows.Add(r);
             }
 
+            //create weather widget
+            WeatherService.ServiceClient weatherProxy = new WeatherService.ServiceClient();
+            var weatherForecast = weatherProxy.GetForecast();
+            var todayWeather = weatherProxy.TodayForecast(weatherProxy.GetWeatherReport().daily);
+            todaysWeather.Text = todayWeather;
+            /*for(int i = 0; i < 5; i++)
+            {
+                TableRow r = new TableRow();
+                TableCell c = new TableCell();
+                LiteralControl dailyReport = new LiteralControl();
+                dailyReport.Text += weatherForecast[i];
+                c.Controls.Add(dailyReport);
+                r.Cells.Add(c);
+
+                //Weather.Rows.Add(r);
+                Weather[i].Text += dailyReport.Text;
+                
+            }*/
+            Weather1.Text = weatherForecast[0];
+            Weather2.Text = weatherForecast[1];
+            Weather3.Text = weatherForecast[2];
+            Weather4.Text = weatherForecast[3];
+            Weather5.Text = weatherForecast[4];
+
             // Initialize horoscope widget
             DailyHoroscope.ServiceClient horoscopeProxy = new DailyHoroscope.ServiceClient();
             horoscopeReading.Text = horoscopeProxy.getHoroscopeReading("Aries");

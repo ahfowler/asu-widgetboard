@@ -17,65 +17,26 @@
 
         <div style="min-width: 70%; margin-left: 10px;">
             <h3>Weather Forecast</h3>
-            <!-- https://rapidapi.com/stefan.skliarov/api/AccuWeather?endpoint=apiendpoint_200c1560-f967-11e7-847f-a7b04b853fafgetDailyForecastByLocationKey -->
+            <!-- https://rapidapi.com/stefan.skliarov/api/AccuWeather?endpoint=apiendpoint_200c1560-f967-11e7-847f-a7b04b853fafgetDailyForecastByLocationKey
             <div style="display: flex; justify-content: space-around; margin-bottom: 20px; margin-top: 20px;">
-                <!-- Current Weather Image -->
                 <div style="text-align: center;">
-                    <img src="https://www.flaticon.com/svg/static/icons/svg/1163/1163661.svg" style="max-height: 150px;" />
-                    <h5>Partly Cloudy</h5>
+                    <img  ID="TodayImage" src="https://www.flaticon.com/svg/static/icons/svg/1163/1163661.svg" style="max-height: 150px;" />
+                    <h5 id="TodayWeather">Partly Cloudy</h5>
                 </div>
-                <!-- Current Temperature Details -->
                 <div style="text-align: center;">
                     <h4><b>MONDAY</b> | NOVEMBER 16TH, 2020</h4>
                     <p>Tempe, Arizona</p>
                     <hr />
                     <h3>45&#176</h3>
                     <h5>54&#176 / 89&#176</h5>
-                </div>
-            </div>
+                </div>-->
+            <asp:Label ID="todaysWeather" runat="server"></asp:Label>
             <div style="display: flex; justify-content: space-between; padding: 15px;">
-                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
-                    <h5><b>MONDAY</b></h5>
-                    <hr />
-                    <h3>45&#176</h3>
-                    <h5>54&#176 / 89&#176</h5>
-                </div>
-                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
-                    <h5><b>TUESDAY</b></h5>
-                    <hr />
-                    <h3>45&#176</h3>
-                    <h5>54&#176 / 89&#176</h5>
-                </div>
-                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
-                    <h5><b>WEDNESDAY</b></h5>
-                    <hr />
-                    <h3>45&#176</h3>
-                    <h5>54&#176 / 89&#176</h5>
-                </div>
-                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
-                    <h5><b>THURSDAY</b></h5>
-                    <hr />
-                    <h3>45&#176</h3>
-                    <h5>54&#176 / 89&#176</h5>
-                </div>
-                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
-                    <h5><b>FRIDAY</b></h5>
-                    <hr />
-                    <h3>45&#176</h3>
-                    <h5>54&#176 / 89&#176</h5>
-                </div>
-                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
-                    <h5><b>SATURDAY</b></h5>
-                    <hr />
-                    <h3>45&#176</h3>
-                    <h5>54&#176 / 89&#176</h5>
-                </div>
-                <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;">
-                    <h5><b>SUNDAY</b></h5>
-                    <hr />
-                    <h3>45&#176</h3>
-                    <h5>54&#176 / 89&#176</h5>
-                </div>
+                <asp:Label style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;" ID="Weather1" runat="server"></asp:Label>
+                <asp:Label style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;" ID="Weather2" runat="server"></asp:Label>
+                <asp:Label style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;" ID="Weather3" runat="server"></asp:Label>
+                <asp:Label style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;" ID="Weather4" runat="server"></asp:Label>
+                <asp:Label style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;" ID="Weather5" runat="server"></asp:Label>
             </div>
         </div>
     </div>

@@ -1,12 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project5", "Project5\Project5.csproj", "{EFF7FF75-9ED8-442D-AAEC-1AB55D8C3890}"
 	ProjectSection(ProjectDependencies) = postProject
+		{A85D4369-2A35-4E82-92FB-ED7EC9ACF919} = {A85D4369-2A35-4E82-92FB-ED7EC9ACF919}
 		{AB56A7BC-7285-4D5A-9266-FEA799B2C1EE} = {AB56A7BC-7285-4D5A-9266-FEA799B2C1EE}
 		{4CFA48C0-EF8A-4214-994C-198633F7E794} = {4CFA48C0-EF8A-4214-994C-198633F7E794}
+		{ECB1D9DB-0219-431E-85CD-E6A578FE6A26} = {ECB1D9DB-0219-431E-85CD-E6A578FE6A26}
 		{BA3C73FC-7008-4E88-8B8E-730C3F2DB0B6} = {BA3C73FC-7008-4E88-8B8E-730C3F2DB0B6}
 	EndProjectSection
 EndProject
@@ -76,6 +78,50 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PhoenixSunsSchedule", "Phoe
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "NewsFeedService", "..\..\Junior Year\Fall2020\CSE 445\Projects\Project 3\Assignment 5\ASUWidgetBoard\WidgetServices\NewsFeedService\", "{A85D4369-2A35-4E82-92FB-ED7EC9ACF919}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_49206"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\Junior Year\Fall2020\CSE 445\Projects\Project 3\Assignment 5\ASUWidgetBoard\WidgetServices\NewsFeedService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49206\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_49206"
+		Release.AspNetCompiler.PhysicalPath = "..\..\Junior Year\Fall2020\CSE 445\Projects\Project 3\Assignment 5\ASUWidgetBoard\WidgetServices\NewsFeedService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49206\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "49206"
+		SlnRelativePath = "..\..\Junior Year\Fall2020\CSE 445\Projects\Project 3\Assignment 5\ASUWidgetBoard\WidgetServices\NewsFeedService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WeatherService", "..\..\Junior Year\Fall2020\CSE 445\Projects\Project 3\Assignment 5\ASUWidgetBoard\WidgetServices\WeatherService\", "{ECB1D9DB-0219-431E-85CD-E6A578FE6A26}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52154"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\Junior Year\Fall2020\CSE 445\Projects\Project 3\Assignment 5\ASUWidgetBoard\WidgetServices\WeatherService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52154\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52154"
+		Release.AspNetCompiler.PhysicalPath = "..\..\Junior Year\Fall2020\CSE 445\Projects\Project 3\Assignment 5\ASUWidgetBoard\WidgetServices\WeatherService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52154\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52154"
+		SlnRelativePath = "..\..\Junior Year\Fall2020\CSE 445\Projects\Project 3\Assignment 5\ASUWidgetBoard\WidgetServices\WeatherService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,11 +144,19 @@ Global
 		{AB56A7BC-7285-4D5A-9266-FEA799B2C1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB56A7BC-7285-4D5A-9266-FEA799B2C1EE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{AB56A7BC-7285-4D5A-9266-FEA799B2C1EE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A85D4369-2A35-4E82-92FB-ED7EC9ACF919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85D4369-2A35-4E82-92FB-ED7EC9ACF919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A85D4369-2A35-4E82-92FB-ED7EC9ACF919}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85D4369-2A35-4E82-92FB-ED7EC9ACF919}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{ECB1D9DB-0219-431E-85CD-E6A578FE6A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB1D9DB-0219-431E-85CD-E6A578FE6A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB1D9DB-0219-431E-85CD-E6A578FE6A26}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB1D9DB-0219-431E-85CD-E6A578FE6A26}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {F96C304C-800C-45C1-ACFA-D37C92EEFD79}
+		SolutionGuid = {A3DB4134-CA90-4B2F-834F-87B526AE8087}
 	EndGlobalSection
 EndGlobal

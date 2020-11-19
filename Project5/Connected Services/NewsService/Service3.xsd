@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:49206/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Security.Policy" />
+  <xs:complexType name="NewsResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="articles" nillable="true" type="tns:ArrayOfArticles" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="totalResults" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewsResults" nillable="true" type="tns:NewsResults" />
+  <xs:complexType name="ArrayOfArticles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Articles" nillable="true" type="tns:Articles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArticles" nillable="true" type="tns:ArrayOfArticles" />
+  <xs:complexType name="Articles">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Security.Policy" minOccurs="0" name="articleImage" nillable="true" type="q1:Url" />
+      <xs:element minOccurs="0" name="articleLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="author" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="publishDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Articles" nillable="true" type="tns:Articles" />
+</xs:schema>

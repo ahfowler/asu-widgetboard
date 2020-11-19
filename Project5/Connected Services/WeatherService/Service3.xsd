@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="WeatherReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="daily" nillable="true" type="tns:ArrayOfDailyForecast" />
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="lon" type="xs:double" />
+      <xs:element minOccurs="0" name="timezone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="timezone_offset" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WeatherReport" nillable="true" type="tns:WeatherReport" />
+  <xs:complexType name="ArrayOfDailyForecast">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DailyForecast" nillable="true" type="tns:DailyForecast" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDailyForecast" nillable="true" type="tns:ArrayOfDailyForecast" />
+  <xs:complexType name="DailyForecast">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clouds" type="xs:double" />
+      <xs:element minOccurs="0" name="deg" type="xs:double" />
+      <xs:element minOccurs="0" name="dew_point" type="xs:double" />
+      <xs:element minOccurs="0" name="dt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="feels" nillable="true" type="tns:FeelsLike" />
+      <xs:element minOccurs="0" name="humidity" type="xs:double" />
+      <xs:element minOccurs="0" name="pop" type="xs:double" />
+      <xs:element minOccurs="0" name="pressure" type="xs:double" />
+      <xs:element minOccurs="0" name="speed" type="xs:double" />
+      <xs:element minOccurs="0" name="sunrise" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sunset" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="temp" nillable="true" type="tns:TempInfo" />
+      <xs:element minOccurs="0" name="uvi" type="xs:double" />
+      <xs:element minOccurs="0" name="weather" nillable="true" type="tns:ArrayOfWeather" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DailyForecast" nillable="true" type="tns:DailyForecast" />
+  <xs:complexType name="FeelsLike">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="day" type="xs:double" />
+      <xs:element minOccurs="0" name="even" type="xs:double" />
+      <xs:element minOccurs="0" name="morn" type="xs:double" />
+      <xs:element minOccurs="0" name="night" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FeelsLike" nillable="true" type="tns:FeelsLike" />
+  <xs:complexType name="TempInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="day" type="xs:double" />
+      <xs:element minOccurs="0" name="eve" type="xs:double" />
+      <xs:element minOccurs="0" name="max" type="xs:double" />
+      <xs:element minOccurs="0" name="min" type="xs:double" />
+      <xs:element minOccurs="0" name="morn" type="xs:double" />
+      <xs:element minOccurs="0" name="night" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TempInfo" nillable="true" type="tns:TempInfo" />
+  <xs:complexType name="ArrayOfWeather">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Weather" nillable="true" type="tns:Weather" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWeather" nillable="true" type="tns:ArrayOfWeather" />
+  <xs:complexType name="Weather">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="icon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="main" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Weather" nillable="true" type="tns:Weather" />
+</xs:schema>
