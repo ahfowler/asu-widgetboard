@@ -211,7 +211,7 @@
                 This is the self-subscribed member page that contains the ASU WidgetBoard.
             </p>
             <p>
-                <a class="btn btn-default" href="Dashboard.aspx">Visit &raquo;</a>
+                <a class="btn btn-default" href="Member/Dashboard">Visit &raquo;</a>
             </p>
         </div>
         <div class="col-md-6">
@@ -220,7 +220,7 @@
                 This is the authorization-required administrator staff page that contains the configuration settings for the ASU WidgetBoard.
             </p>
             <p>
-                <a class="btn btn-default" href="Settings.aspx">Visit &raquo;</a>
+                <a class="btn btn-default" href="Staff/Settings">Visit &raquo;</a>
             </p>
         </div>
     </div>

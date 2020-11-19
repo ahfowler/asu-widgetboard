@@ -145,9 +145,11 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="App_Data\Administrators.xml" />
+    <Content Include="App_Data\Students.xml" />
     <Content Include="Login.aspx" />
     <Content Include="Member\Dashboard.aspx" />
-    <Content Include="Settings.aspx" />
+    <Content Include="Staff\Settings.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -240,11 +242,11 @@
       <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Settings.aspx.cs">
+    <Compile Include="Staff\Settings.aspx.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Settings.aspx.designer.cs">
+    <Compile Include="Staff\Settings.aspx.designer.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -280,13 +282,12 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Staff\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

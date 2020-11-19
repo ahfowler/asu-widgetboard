@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Students>
+  <Student>
+    <Username>Azaria Fowler</Username>
+    <Password>password</Password>
+  </Student>
+  <Student>
+    <Username>Kaitlyn Allen</Username>
+    <Password>password</Password>
+  </Student>
+</Students>

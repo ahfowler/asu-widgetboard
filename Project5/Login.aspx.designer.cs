@@ -15,6 +15,15 @@ namespace Project5
     {
 
         /// <summary>
+        /// unauthorizedPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel unauthorizedPanel;
+
+        /// <summary>
         /// loginUsername control.
         /// </summary>
         /// <remarks>
@@ -33,15 +42,6 @@ namespace Project5
         protected global::System.Web.UI.WebControls.TextBox loginPassword;
 
         /// <summary>
-        /// logInErrorMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label logInErrorMessage;
-
-        /// <summary>
         /// logIn control.
         /// </summary>
         /// <remarks>
@@ -58,6 +58,15 @@ namespace Project5
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox rememberMeCheckBox;
+
+        /// <summary>
+        /// logInErrorMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label logInErrorMessage;
 
         /// <summary>
         /// registerUsername control.
