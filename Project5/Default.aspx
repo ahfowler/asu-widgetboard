@@ -67,13 +67,13 @@
                 <tr>
                     <td>-</td>
                     <td>Global.asax file</td>
-                    <td>This file contains a global event handler that displays a welcome message and initializes the navigation bar according to wether a user is signed in.</td>
+                    <td>This file contains a global event handler that displays a welcome message and initializes the navigation bar according to whether a user is signed in.</td>
                     <td><u>Resources</u>:  GUI design code and conditional C# code behind GUI.<br />
                         <u>Usage</u>: This is used in Default.aspx if a user is already signed in.
                     </td>
                 </tr>
                 <tr>
-                    <td>-</td>
+                    <td>Kaitlyn Allen</td>
                     <td>Encryption.dll file</td>
                     <td>
                         This file contains the functions for encoding and decoding usernames and passwords.
@@ -92,7 +92,7 @@
                 </tr>
                 <!-- Data Management -->
                 <tr>
-                    <td>-</td>
+                    <td>Kaitlyn Allen</td>
                     <td>User profile cookie</td>
                     <td>This cookie contains the currently logged in user's information (username and password).</td>
                     <td><u>Resources</u>: -<br />
@@ -108,7 +108,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>-</td>
+                    <td>Kaitlyn Allen</td>
                     <td>Students.xml file</td>
                     <td>This file contains all of the usernames and passwords of self-registered students that can use the ASU WidgetBoard.</td>
                     <td><u>Resources</u>: A plain text file written in XML language. <br />
@@ -116,7 +116,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>-</td>
+                    <td>Kaitlyn Allen</td>
                     <td>Admins.xml file</td>
                     <td>This file contains all of the usernames and passwords of pre-approved admins that can edit the contents of the ASU WidgetBoard.</td>
                     <td><u>Resources</u>: A plain text file written in XML language. <br />
@@ -186,19 +186,19 @@
                 <tr>
                     <td>Kaitlyn Allen</td>
                     <td>News Focus</td>
-                    <td><u>Parameters</u>: -<br />
-                        <u>Return Type</u>: -
+                    <td><u>Parameters</u>: N/A<br />
+                        <u>Return Type</u>: <samp> List < string ></samp> of news articles
                     </td>
-                    <td>-</td>
+                    <td>This service returns the latest news articles relating to Arizona State University with dates and links to the articles.</td>
                     <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
                     <td>Weather Service</td>
-                    <td><u>Parameters</u>: -<br />
-                        <u>Return Type</u>: -
+                    <td><u>Parameters</u>: <samp> Integer zip code</samp><br />
+                        <u>Return Type</u>: <samp>XML </samp> holding five day weather forecast
                     </td>
-                    <td>-</td>
+                    <td>This service returns the 5-day weather forecast for the area of the given zipcode.</td>
                     <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
                 </tr>
             </tbody>
