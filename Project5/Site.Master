@@ -55,7 +55,7 @@
                         <li><a runat="server" href="~/Settings">Settings</a></li>
                     </ul>
                 </div>
-                <asp:ContentPlaceHolder ID="signedInPanel" runat="server">
+                <asp:ContentPlaceHolder ID="signedInPanel" Visible="False" runat="server">
                     <div class="navbar-nav" style="margin-left: auto;">
                         <ul class="nav navbar-nav">
                             <li><a runat="server" href="~/">Hello, <% Response.Write(Context.User.Identity.Name); %></a></li>

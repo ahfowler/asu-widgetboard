@@ -11,11 +11,28 @@ namespace Project5
 {
     public class Global : HttpApplication
     {
+        public static bool signedIn;
+
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        void Session_Start(object sender, EventArgs e)
+        {
+            if (Context.User != null)
+            {
+                if (Context.User.Identity.IsAuthenticated)
+                {
+                    signedIn = true;
+                }
+            }
+            else
+            {
+                signedIn = false;
+            }
         }
     }
 }
