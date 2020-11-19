@@ -15,6 +15,33 @@ namespace Project5
     {
 
         /// <summary>
+        /// signedInPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder signedInPanel;
+
+        /// <summary>
+        /// signOut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button signOut;
+
+        /// <summary>
+        /// logInPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder logInPanel;
+
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

@@ -51,16 +51,26 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/Dashboard">Dashboard</a></li>
+                        <li><a runat="server" href="~/Member/Dashboard">Dashboard</a></li>
                         <li><a runat="server" href="~/Settings">Settings</a></li>
                     </ul>
                 </div>
-                <div class="navbar-nav" style="margin-left: auto;">
-                    <a class="btn btn-primary navbar-btn" href="~/">Sign Up</a>
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Log In</a></li>
-                    </ul>
-                </div>
+                <asp:ContentPlaceHolder ID="signedInPanel" Visible="True" runat="server">
+                    <div class="navbar-nav" style="margin-left: auto;">
+                        <ul class="nav navbar-nav">
+                            <li><a runat="server" href="~/">Welcome, <% Response.Write(Context.User.Identity.Name); %>!</a></li>
+                        </ul>
+                        <asp:Button CssClass="btn btn-default navbar-btn" ID="signOut" runat="server" Text="Sign Out" OnClick="signOut_Click" />
+                    </div>
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="logInPanel" Visible="True" runat="server">
+                    <div class="navbar-nav" style="margin-left: auto;">
+                        <a class="btn btn-primary navbar-btn" href="~/">Sign Up</a>
+                        <ul class="nav navbar-nav">
+                            <li><a runat="server" href="~/">Log In</a></li>
+                        </ul>
+                    </div>
+                </asp:ContentPlaceHolder>      
             </div>
         </div>
         <div class="container body-content">
@@ -68,7 +78,6 @@
                 
             </asp:ContentPlaceHolder>
         </div>
-
     </form>
 </body>
 </html>
