@@ -114,6 +114,28 @@
     <None Include="Connected Services\DailyHoroscope\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Connected Services\NewsService\Project5.NewsService.NewsResults.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\NewsService\Service.wsdl" />
+    <None Include="Connected Services\NewsService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewsService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewsService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewsService\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewsService\Service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\NewsService\Service5.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\PhoenixSunsSchedule\Service.wsdl" />
     <None Include="Connected Services\PhoenixSunsSchedule\Service.xsd">
       <SubType>Designer</SubType>
@@ -142,6 +164,21 @@
     <None Include="Connected Services\PhoenixSunsSchedule\configuration91.svcinfo" />
     <None Include="Connected Services\PhoenixSunsSchedule\configuration.svcinfo" />
     <None Include="Connected Services\PhoenixSunsSchedule\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\NewsService\configuration91.svcinfo" />
+    <None Include="Connected Services\NewsService\configuration.svcinfo" />
+    <None Include="Connected Services\NewsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WeatherService\configuration91.svcinfo" />
+    <None Include="Connected Services\WeatherService\configuration.svcinfo" />
+    <Content Include="Connected Services\WeatherService\Project5.WeatherService.WeatherReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\WeatherService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -175,6 +212,19 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Member\Web.config" />
+    <None Include="Connected Services\WeatherService\Service.wsdl" />
+    <None Include="Connected Services\WeatherService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WeatherService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WeatherService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WeatherService\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -217,12 +267,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\NewsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\PhoenixSunsSchedule\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\StockBuildAndQuote\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WeatherService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -300,8 +360,10 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\DailyHoroscope\" />
+    <WCFMetadataStorage Include="Connected Services\NewsService\" />
     <WCFMetadataStorage Include="Connected Services\PhoenixSunsSchedule\" />
     <WCFMetadataStorage Include="Connected Services\StockBuildAndQuote\" />
+    <WCFMetadataStorage Include="Connected Services\WeatherService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
