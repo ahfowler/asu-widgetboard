@@ -11,7 +11,7 @@ namespace Project5
 {
     public class Global : HttpApplication
     {
-        public static bool signedIn;
+        public static bool signedIn = false;
 
         void Application_Start(object sender, EventArgs e)
         {
@@ -20,7 +20,7 @@ namespace Project5
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        void Session_Start(object sender, EventArgs e)
+        void Application_AuthenticateRequest(object sender, EventArgs e)
         {
             if (Context.User != null)
             {

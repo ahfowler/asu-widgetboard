@@ -11,12 +11,24 @@ namespace Project5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Global.signedIn)
+            {
+                signedInPanel.Visible = true;
+                logInPanel.Visible = false;
+            } else
+            {
+                signedInPanel.Visible = false;
+                logInPanel.Visible = true;
+            }
         }
 
         protected void signOut_Click(object sender, EventArgs e)
         {
             System.Web.Security.FormsAuthentication.SignOut();
-            Server.Transfer("Default.aspx");
+            signedInPanel.Visible = false;
+            logInPanel.Visible = true;
+            Global.signedIn = false;
+            Server.Transfer("~/Default.aspx");
         }
     }
 }
