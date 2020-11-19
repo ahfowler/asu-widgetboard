@@ -54,13 +54,15 @@ namespace Project5
 
             // Dynamically create news widget
             int numberOfRows = 5;
-            for (int i = 0; i < numberOfRows; i++)
+            NewsService.ServiceClient newsProxy = new NewsService.ServiceClient();
+            var newsReport = newsProxy.GetNewsList();
+            for (int i = 0; i < newsReport.Length; i++)
             {
                 TableRow r = new TableRow();
                 TableCell c = new TableCell();
 
                 LiteralControl newsElement = new LiteralControl();
-                newsElement.Text += @"<div><b>" + "November 16th, 2020 | 02:54:37" + "</b><br/><h4>" + "Cal football: As clock ticks, Bears still waiting to see if Arizona State game is on" + " </h4><br /><p>" + "Cal officials stay silent as the possibility of a second canceled game looms; ASU, meanwhile, cancels its practice..." + "<a href=" + "https://www.mercurynews.com/2020/11/12/cal-football-as-clock-ticks-bears-still-waiting-to-see-if-arizona-state-game-is-on/" + "> Read More </a>" + "</p><hr /></div>";
+                newsElement.Text += newsReport[i];
 
                 c.Controls.Add(newsElement);
 
@@ -93,19 +95,6 @@ namespace Project5
             var weatherForecast = weatherProxy.GetForecast();
             var todayWeather = weatherProxy.TodayForecast(weatherProxy.GetWeatherReport().daily);
             todaysWeather.Text = todayWeather;
-            /*for(int i = 0; i < 5; i++)
-            {
-                TableRow r = new TableRow();
-                TableCell c = new TableCell();
-                LiteralControl dailyReport = new LiteralControl();
-                dailyReport.Text += weatherForecast[i];
-                c.Controls.Add(dailyReport);
-                r.Cells.Add(c);
-
-                //Weather.Rows.Add(r);
-                Weather[i].Text += dailyReport.Text;
-                
-            }*/
             Weather1.Text = weatherForecast[0];
             Weather2.Text = weatherForecast[1];
             Weather3.Text = weatherForecast[2];

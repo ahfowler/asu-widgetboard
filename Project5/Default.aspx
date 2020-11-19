@@ -19,7 +19,7 @@
                     <th colspan="4">The application is deployed at: <a href="http://webstrar29.fulton.asu/Default.aspx">http://webstrar29.fulton.asu/Default.aspx</a></th>
                 </tr>
                 <tr>
-                    <th colspan="4">Percentage of Contribution: Azaria Fowler: 50% + Kaitlyn Allen: 50%</th>
+                    <th colspan="4">Percentage of Contribution: Azaria Fowler: 70% + Kaitlyn Allen: 30%</th>
                 </tr>
                 <tr>
                     <th>Provider Name</th>
@@ -56,7 +56,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>-</td>
+                    <td>Azaria Fowler</td>
                     <td>Login.aspx page</td>
                     <td>This is the log in and register page that utilizes forms-based security for the user control.</td>
                     <td><u>Resources</u>: GUI design code, C# code behind GUI, and the decryption/encryption function from Decryption.dll file.<br />
@@ -65,7 +65,7 @@
                 </tr>
                 <!-- Local Component -->
                 <tr>
-                    <td>-</td>
+                    <td>Azaria Fowler</td>
                     <td>Global.asax file</td>
                     <td>This file contains a global event handler that displays a welcome message and initializes the navigation bar according to whether a user is signed in.</td>
                     <td><u>Resources</u>:  GUI design code and conditional C# code behind GUI.<br />
@@ -92,7 +92,7 @@
                 </tr>
                 <!-- Data Management -->
                 <tr>
-                    <td>Kaitlyn Allen</td>
+                    <td>Azaria Fowler</td>
                     <td>User profile cookie</td>
                     <td>This cookie contains the currently logged in user's information (username and password).</td>
                     <td><u>Resources</u>: -<br />
@@ -100,7 +100,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>-</td>
+                    <td>Kaitlyn Allen</td>
                     <td>Zodiac sign session state</td>
                     <td>This is a temprary state that contains the previously selected zodiac sign within a session.</td>
                     <td><u>Resources</u>: -<br />
@@ -108,7 +108,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Kaitlyn Allen</td>
+                    <td>Azaria Fowler</td>
                     <td>Students.xml file</td>
                     <td>This file contains all of the usernames and passwords of self-registered students that can use the ASU WidgetBoard.</td>
                     <td><u>Resources</u>: A plain text file written in XML language. <br />
@@ -116,7 +116,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Kaitlyn Allen</td>
+                    <td>Azaria Fowler</td>
                     <td>Admins.xml file</td>
                     <td>This file contains all of the usernames and passwords of pre-approved admins that can edit the contents of the ASU WidgetBoard.</td>
                     <td><u>Resources</u>: A plain text file written in XML language. <br />
