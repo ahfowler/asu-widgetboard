@@ -1,14 +1,14 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StockBuildQuoteTryIt.aspx.cs" Inherits="Project5.Login" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StocksTryIt.aspx.cs" Inherits="Project5.StocksTryIt" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="row">
+<div class="row">
         <div class="col-md-6">
             <h2>Stock Build</h2>
             <p>
                 This service utilizes stock data from Finnhub and finds the open price of each stock symbol from the US stock market. It then creates and saves a file with 50 random symbol price pairs (symbol, open price) in a file. This service returns the file path to the saved file of symbol price pairs.</p>
             <p>
-                <strong>Service URL</strong>:  <a>http://webstrar29.fulton.asu.edu/Page2/ASUWidgetBoard/Service.svc</a></p>
+                <strong>Service URL</strong>:  <a>-</a></p>
             <p>
                 <strong>Input</strong>: None
             </p>
@@ -19,7 +19,7 @@
             <h3>
                 Simulation</h3>
             <p>
-        &nbsp;<asp:Button  class="btn btn-default" ID="Button1" runat="server" Text="Build Stock Price Pairs" />
+        &nbsp;<asp:Button  class="btn btn-default" ID="Button1" runat="server" OnClick="Button1_Click" Text="Build Stock Price Pairs" />
             </p>
             <div>
                 The symbol price pairs file is located at:
@@ -31,7 +31,7 @@
             <p>
                 This service reads a file of symbol price pairs and returns the stock price of the given stock symbol. The user can manually type a stock symbol or a select one from a list of valid stock symbols.</p>
             <p>
-                <strong>Service URL</strong>:  <a>http://webstrar29.fulton.asu.edu/Page2/ASUWidgetBoard/Service.sv</a>c</p>
+                <strong>Service URL</strong>:  <a>-</a></p>
             <p>
                 <strong>Input</strong>: 
                 </p>
@@ -52,14 +52,15 @@
             </div>
             <div class="col-sm-6">
                 <p>
-                    Select a Stock Symbol:<asp:DropDownList ID="DropDownList1" runat="server" Width="100%" size="6">
+                    Select a Stock Symbol:<asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="100%" size="6">
             </asp:DropDownList>
             </p>
             </div>
 
-            <asp:Button class="btn btn-default" ID="Button2" runat="server"  Text="Find Stock Price" />
+            <asp:Button class="btn btn-default" ID="Button2" runat="server" OnClick="Button2_Click" Text="Find Stock Price" />
             <asp:Label class="text-success" ID="Label2" runat="server" Text=""></asp:Label>
     
         </div>
     </div>
+
 </asp:Content>

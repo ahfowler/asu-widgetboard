@@ -11,7 +11,7 @@ namespace Project5
 {
 
 
-    public partial class Login
+    public partial class StocksTryIt
     {
 
         /// <summary>

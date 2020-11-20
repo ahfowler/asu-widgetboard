@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Project5.TryItPages
+namespace Project5
 {
-    public partial class StockBuildQuoteTryIt : System.Web.UI.Page
+    public partial class StocksTryIt : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        /*
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -23,9 +22,9 @@ namespace Project5.TryItPages
 
             List<string> stockSymbols = new List<string>();
 
-            if (System.IO.File.Exists(Label1.Text))
+            if (File.Exists(Label1.Text))
             {
-                System.IO.StreamReader Textfile = new System.IO.StreamReader(Label1.Text);
+                StreamReader Textfile = new StreamReader(Label1.Text);
 
                 string line = Textfile.ReadLine();
 
@@ -55,7 +54,5 @@ namespace Project5.TryItPages
         {
             TextBox1.Text = DropDownList1.Text;
         }
-
-    */
     }
 }
