@@ -39,7 +39,7 @@ using Newtonsoft.Json;
         {
 			string newsReport;
 			DateTime dt = Convert.ToDateTime(article.publishedAt);
-			newsReport = @"<div><b>" + dt.DayOfWeek +" | "+dt.ToString("MMMM") +" " +dt.Day+", "+dt.Year + "</b><br/><h4>" + article.title + " </h4><img src='"+article.urlToImage+"'style='max-height:75px; max-width:100px;'><br/><p>" + article.description + "<a href='" + article.url + "'> Read More </a>" + "</p><hr/></div>";
+			newsReport = @"<div><b>" + dt.DayOfWeek +" | "+dt.ToString("MMMM") +" " +dt.Day+", "+dt.Year + "</b><br/><h4>" + article.title + " </h4><img src='"+article.urlToImage+"'style='max-height:75px; max-width:100px;'><br/><p>" + article.description + "<a href='" + article.url + "'target='_blank'> Read More </a>" + "</p><hr/></div>";
 			newsReel.Add(newsReport);
 		}
 			return newsReel;
