@@ -8,7 +8,7 @@
     <div style="display: flex; justify-content: space-between;">
         <div ID="StocksSection" style="min-width: 30%; margin-right: 10px;">
             <h3>Stock Quotes</h3>
-            <div style="max-height: 375px; overflow-y: scroll; margin-bottom: 20px; margin-top: 20px;">
+            <div style="max-height: 480px; overflow-y: scroll; margin-bottom: 20px; margin-top: 20px;">
                 <asp:Table ID="Stocks" runat="server"
                     CellPadding="5" HorizontalAlign="Left" CellSpacing="5" Width="100%" GridLines="None">
                 </asp:Table>
@@ -44,7 +44,6 @@
     <div style="display: flex;justify-content: space-between;">
         <div ID="NewsSection" style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;max-width:30%;">
             <h3>ASU News</h3>
-            <!-- https://rapidapi.com/webit/api/webit-news-search -->
             <div style="max-height: 375px; overflow-y: scroll; margin-bottom: 20px; margin-top: 20px;">
                 <asp:Table ID="News" runat="server"
                     CellPadding="5" HorizontalAlign="Left" CellSpacing="5" Width="100%" GridLines="None">
