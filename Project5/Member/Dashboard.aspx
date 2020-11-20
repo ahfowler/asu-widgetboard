@@ -6,7 +6,7 @@
     <p>This is the self-subscribed member page that contains the ASU WidgetBoard.</p>
 
     <div style="display: flex; justify-content: space-between;">
-        <div style="min-width: 30%; margin-right: 10px;">
+        <div ID="StocksSection" style="min-width: 30%; margin-right: 10px;">
             <h3>Stock Quotes</h3>
             <div style="max-height: 375px; overflow-y: scroll; margin-bottom: 20px; margin-top: 20px;">
                 <asp:Table ID="Stocks" runat="server"
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div style="min-width: 70%; margin-left: 10px;">
+        <div ID="WeatherSection" style="min-width: 70%; margin-left: 10px;">
             <h3>Weather Forecast</h3>
             <!-- https://rapidapi.com/stefan.skliarov/api/AccuWeather?endpoint=apiendpoint_200c1560-f967-11e7-847f-a7b04b853fafgetDailyForecastByLocationKey
             <div style="display: flex; justify-content: space-around; margin-bottom: 20px; margin-top: 20px;">
@@ -42,7 +42,7 @@
     </div>
 
     <div style="display: flex;justify-content: space-between;">
-        <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;max-width:30%;">
+        <div ID="NewsSection" style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;max-width:30%;">
             <h3>ASU News</h3>
             <!-- https://rapidapi.com/webit/api/webit-news-search -->
             <div style="max-height: 375px; overflow-y: scroll; margin-bottom: 20px; margin-top: 20px;">
@@ -60,7 +60,7 @@
             </div>
             </div>
 
-        <div style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;max-width:30%;">
+        <div ID="ScopeSection" style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;max-width:30%;">
             <h3>Daily Horoscope</h3>
             <div style="text-align: center;min-height: 375px;">
                 <asp:Image style="max-height: 100px;" ID="horoscopeImage" runat="server" ImageUrl="https://www.flaticon.com/svg/static/icons/svg/2647/2647369.svg" />
@@ -84,7 +84,7 @@
                 <asp:Button class="btn btn-default" ID="submitHoroscope" runat="server" Text="Submit" OnClick="submitHoroscope_Click" />
                 <hr />
                 <p>
-                    <asp:Label ID="horoscopeReading" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="horoscopeReading" runat="server"></asp:Label>
                 </p>
             </div>
         </div>

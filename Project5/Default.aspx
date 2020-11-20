@@ -135,7 +135,7 @@
                     <th colspan="5" style="text-align: center;background-color:#f8f8f8"><h3>Service Directory</h3></th>
                 </tr>
                 <tr>
-                    <th colspan="5">Percentage of Contribution: Azaria Fowler: 50% + Kaitlyn Allen: 50%</th>
+                    <th colspan="5">Percentage of Contribution: Azaria Fowler: 60% + Kaitlyn Allen: 40%</th>
                 </tr>
                 <tr>
                     <th>Provider Name</th>

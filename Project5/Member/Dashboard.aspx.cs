@@ -8,6 +8,7 @@ namespace Project5
 {
     public partial class About : Page
     {
+        bool submittedSign = false;
         protected void Page_Load(object sender, EventArgs e)
         {
             // Generate stock pairs file.
@@ -53,7 +54,6 @@ namespace Project5
             }
 
             // Dynamically create news widget
-            int numberOfRows = 5;
             NewsService.ServiceClient newsProxy = new NewsService.ServiceClient();
             var newsReport = newsProxy.GetNewsList();
             for (int i = 0; i < newsReport.Length; i++)
@@ -90,7 +90,7 @@ namespace Project5
                 SunsSchedule.Rows.Add(r);
             }
 
-            //create weather widget
+            //dynamically build weather widget
             WeatherService.ServiceClient weatherProxy = new WeatherService.ServiceClient();
             var weatherForecast = weatherProxy.GetForecast();
             var todayWeather = weatherProxy.TodayForecast(weatherProxy.GetWeatherReport().daily);
@@ -101,19 +101,51 @@ namespace Project5
             Weather4.Text = weatherForecast[3];
             Weather5.Text = weatherForecast[4];
 
+            
             // Initialize horoscope widget
             DailyHoroscope.ServiceClient horoscopeProxy = new DailyHoroscope.ServiceClient();
-            horoscopeReading.Text = horoscopeProxy.getHoroscopeReading("Aries");
-            horoscopeSign.Text = "Aries";
-            horoscopeImage.ImageUrl = horoscopeProxy.getHoroscopeImage("Aries");
+            if(Session.Count != 0)
+            {
+                string indexKey = "horoscopeSession" + Session.Count;
+                Horoscope storedReading = (Horoscope)Session[indexKey];
+                horoscopeReading.Text = storedReading._Reading;
+                horoscopeSign.Text = storedReading._Sign;
+                horoscopeImage.ImageUrl = storedReading._Image;
+                horoscopeDropDown.SelectedValue = storedReading._Sign;
+            }
+            else
+            {
+                    horoscopeReading.Text = horoscopeProxy.getHoroscopeReading("Aries");
+                    horoscopeSign.Text = "Aries";
+                    horoscopeImage.ImageUrl = horoscopeProxy.getHoroscopeImage("Aries");
+            }
         }
+            
 
         protected void submitHoroscope_Click(object sender, EventArgs e)
         {
+            //zodiac session storage
+            string num = Convert.ToString(Session.Count + 1);
             DailyHoroscope.ServiceClient horoscopeProxy = new DailyHoroscope.ServiceClient();
             horoscopeReading.Text = horoscopeProxy.getHoroscopeReading(horoscopeDropDown.Text);
             horoscopeSign.Text = horoscopeDropDown.Text;
             horoscopeImage.ImageUrl = horoscopeProxy.getHoroscopeImage(horoscopeDropDown.Text);
+            Horoscope userReading = new Horoscope(horoscopeReading.Text, horoscopeSign.Text, horoscopeImage.ImageUrl);
+            string horoscopeKey = "horoscopeSession" + num;
+            Session[horoscopeKey] = userReading;
+        }
+    }
+
+    public class Horoscope
+    {
+        public string _Reading;
+        public string _Sign;
+        public string _Image;
+        public Horoscope(string reading, string sign, string image)
+        {
+            _Reading = reading;
+            _Sign = sign;
+            _Image = image;
         }
     }
 }
