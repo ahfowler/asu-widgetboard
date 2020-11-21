@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Members>
+  <Member>
+    <Username>JaneDoe</Username>
+    <Password>pa55w0rd!!</Password>
+  </Member>
+  <Member>
+    <Username>asuStudent1</Username>
+    <Password>iAmSecure123!</Password>
+  </Member>
+</Members>

@@ -13,5 +13,30 @@ namespace Project5
         {
 
         }
+        protected void ViewStudentsXml(object sender, EventArgs e)
+        {
+            Response.Clear();
+            //returnButton.Visible = true;
+            Response.Buffer = true;
+            Response.Charset = "";
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.ContentType = "application/xml";
+            Response.WriteFile(Server.MapPath("~/App_Data/Students.xml"));
+            Response.Flush();
+            Response.End();
+        }
+
+        protected void ViewAdminXml(object sender, EventArgs e)
+        {
+            Response.Clear();
+            //returnButton.Visible = true;
+            Response.Buffer = true;
+            Response.Charset = "";
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.ContentType = "application/xml";
+            Response.WriteFile(Server.MapPath("~/App_Data/Administrators.xml"));
+            Response.Flush();
+            Response.End();
+        }
     }
 }

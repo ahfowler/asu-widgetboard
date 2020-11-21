@@ -9,16 +9,19 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using SecurityLibrary;
 
+/*********************************************************************
+ * Shared code within this file, contributions are labeled in comments
+ * Log In: Azaria Fowler
+ * Hashing Password: Kaitlyn Allen
+ * Register User: Kaitlyn Allen
+ *********************************************************************/
 namespace Project5
 {
     public partial class Login : System.Web.UI.Page
     {
-        string salt = "KW?OEfw9";
-        protected void Page_Load(object sender, EventArgs e)
-        {
+        protected void Page_Load(object sender, EventArgs e){}
 
-        }
-
+        //Log in functionality - Azaria Fowler
         protected void logInFunction(Object sender, EventArgs e)
         {
             if (logInAuthenticate(loginUsername.Text, loginPassword.Text) != "")
@@ -32,6 +35,7 @@ namespace Project5
             }
         }
 
+        //Log in authentications - Azaria Fowler
         protected string logInAuthenticate(string username, string password)
         {
             string userType = "";
@@ -107,6 +111,7 @@ namespace Project5
             return userType;
         }
 
+        //Register User forms validation - Kaitlyn Allen
         protected void fieldsValidation(Object sender, EventArgs e)
         {
             if (registerUsername.Text.Equals("") || registerConfirmPassword.Text.Equals("") || registerPassword.Text.Equals("") || accountTypeRadioButtons.SelectedItem == null)
@@ -150,6 +155,7 @@ namespace Project5
 
         }
 
+        //Hashing functionality - Kaitlyn Allen
         protected string hashPassword(string password)
         {
             string newPass ="";
@@ -168,6 +174,7 @@ namespace Project5
             return endPass;
         }
 
+        //Register Users - Kaitlyn Allen
         protected void addUser(string username, string password, string userType)
         {
             System.Diagnostics.Debug.WriteLine("INSIDE ADDUSER METHOD");
@@ -222,6 +229,8 @@ namespace Project5
 
             }
         }
+
+        //check for username originality - Kaitlyn Allen
         protected Boolean originalUserName(string username, string file)
         {
             Boolean result = true;

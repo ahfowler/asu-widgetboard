@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Project5._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    <asp:Button ID="returnButton" class="btn btn-default" href="/Default" runat="server" style="visibility:hidden" Text="Return"/>
     <div class="jumbotron">
         <h1>ASU WidgetBoard</h1>
         <p class="lead">The ASU WidgetBoard simplifies and enhances the student experience by displaying a customizable and interactive collection of widgets on a dashboard. All of the widgets are related to Arizona State University news, events, facilities, academics, clubs, and other information useful for students. Each widget utilizes a web service.</p>
@@ -26,6 +26,7 @@
                     <th>Page and component types (e.g. aspx, DLL, SVC, etc.)</th>
                     <th class="description">Component description: What does the component do? What are input/parameter and output/return value?</th>
                     <th>Actual resources and methods used to implement the component and where this component is used?</th>
+                    <th>Try It Link (if applicable)</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +39,7 @@
                         <br />
                         <u>Usage</u>: Default page for application.
                     </td>
+                    <td> - </td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -46,6 +48,7 @@
                     <td><u>Resources</u>: GUI design code, C# code behind GUI, and web services.<br />
                         <u>Usage</u>: Member page for application.
                     </td>
+                    <td> - </td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
@@ -54,6 +57,7 @@
                     <td><u>Resources</u>: GUI design code, C# code behind GUI, and file writing services.<br />
                         <u>Usage</u>: Staff page for application.
                     </td>
+                    <td> - </td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -62,6 +66,7 @@
                     <td><u>Resources</u>: GUI design code, C# code behind GUI, and the decryption/encryption function from Decryption.dll file.<br />
                         <u>Usage</u>: This page is used as a "blocker" for unauthenticated users who try to access the Dashboard.aspx or Settings.aspx. It also serves as a "blocker" for unauthorized users who try to access the Settings.aspx page. It contains the logInFunction and logInAuthenticate functionality.
                     </td>
+                    <td> - </td>
                 </tr>
                 <!-- Local Component -->
                 <tr>
@@ -71,20 +76,22 @@
                     <td><u>Resources</u>:  GUI design code and conditional C# code behind GUI.<br />
                         <u>Usage</u>: This is used in Default.aspx if a user is already signed in.
                     </td>
+                    <td> - </td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
                     <td>Hashing.dll file</td>
                     <td>
-                        This file contains the functions for encoding users' passwords.
+                        This file creates a library that contains the function for encoding users' passwords.
                         <br />
-                        <b>HashAlg</b><br />
-                        <u>Parameters</u>: <samp>string password</samp><br />
+                        <b>HashAlg(string password, string salt)</b><br />
+                        <u>Parameters</u>: <samp>string password</samp><br /><samp>string salt</samp><p>- random key to ensure security</p>
                         <u>Return Type</u>:  <samp>string</samp> representing the hashed password
                     </td>
                     <td><u>Resources</u>: C# class and methods for creating Security library with HashAlg function<br />
                         <u>Usage</u>: This is used in the Login.aspx page for securing and verifying user-inputted credentials.
                     </td>
+                    <td><a class="btn btn-default" href="/TryItPages/HashTryIt">TryIt</a></td>
                 </tr>
                 <!-- Data Management -->
                 <tr>
@@ -94,6 +101,7 @@
                     <td><u>Resources</u>: None<br />
                         <u>Usage</u>: Implicitly used in the web-based form used to authenticate users in Login.aspx.
                     </td>
+                    <td> - </td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
@@ -102,6 +110,7 @@
                     <td><u>Resources</u>: Uses C# class and methods to track session state and retain information about selected horoscope reading and values.<br />
                         <u>Usage</u>: This is used in the Dashboard.aspx page to retain user-selected information.
                     </td>
+                    <td> - </td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -110,6 +119,7 @@
                     <td><u>Resources</u>: A plain text file written in XML language. <br />
                         <u>Usage</u>: This is linked to the Login.aspx page and the encrpytion/decryption function.
                     </td>
+                    <td><asp:Button class="btn btn-default" OnClick="ViewStudentsXml" runat="server" Text="View"></asp:Button></td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -118,6 +128,7 @@
                     <td><u>Resources</u>: A plain text file written in XML language. <br />
                         <u>Usage</u>: This is linked to the Login.aspx page and the encrpytion/decryption function.
                     </td>
+                    <td><asp:Button class="btn btn-default" OnClick="ViewAdminXml" runat="server" Text="View"></asp:Button></td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
@@ -126,6 +137,7 @@
                     <td><u>Resources</u>: Web.config file under Staff page<br />
                         <u>Usage</u>: This is used in the Login.aspx page and the encrpytion/decryption function to store new user information.
                     </td>
+                    <td><a class="btn btn-default" href="/TryItPages/XMLTryIt">TryIt</a></td>
                 </tr>
             </tbody>
         </table>

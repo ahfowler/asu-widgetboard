@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
 using System.Security.Cryptography;
-using System.Text;
 
+//Security Library and hashing algorithm - Kaitlyn Allen
 namespace SecurityLibrary
 {
     public class HashFunctions
