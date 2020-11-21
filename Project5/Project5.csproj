@@ -243,6 +243,8 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="TryItPages\NewsTryIt.aspx" />
+    <Content Include="TryItPages\WeatherTryIt.aspx" />
     <Content Include="TryItPages\StocksTryIt.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -323,6 +325,20 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="TryItPages\NewsTryIt.aspx.cs">
+      <DependentUpon>NewsTryIt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TryItPages\NewsTryIt.aspx.designer.cs">
+      <DependentUpon>NewsTryIt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TryItPages\WeatherTryIt.aspx.cs">
+      <DependentUpon>WeatherTryIt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TryItPages\WeatherTryIt.aspx.designer.cs">
+      <DependentUpon>WeatherTryIt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TryItPages\StocksTryIt.aspx.cs">
       <DependentUpon>StocksTryIt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -338,7 +354,12 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SecurityLibrary\SecurityLibrary.csproj">
+      <Project>{b729b8ff-b894-486d-816b-4afbc7ee7a9e}</Project>
+      <Name>SecurityLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

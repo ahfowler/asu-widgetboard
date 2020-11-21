@@ -1,6 +1,10 @@
-﻿using System;
+﻿using SecurityLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -14,6 +18,7 @@ namespace Project5
         {
             studentsView.Text = null;
             adminView.Text = null;
+            registerErrorMessage.Text = null;
             string destPath = HttpContext.Current.Server.MapPath(@"~/App_Data/Students.xml");
 
             if (System.IO.File.Exists(destPath))
@@ -51,18 +56,6 @@ namespace Project5
                 }
                 fs.Close();
             }
-        }
-
-        protected void save_Click(object sender, EventArgs e)
-        {
-            /*if (!viewNews.Checked)
-            {
-                viewNews.Checked = false;
-                var t = Page.FindControl("NewsSection");
-                HtmlGenericControl newsElement = (HtmlGenericControl)Page.PreviousPage.FindControl("NewsSection");
-                newsElement.Visible = false;
-                t.Visible = false;
-            }*/
         }
 
         protected void fieldValidation(Object sender, EventArgs e)
@@ -111,6 +104,7 @@ namespace Project5
         {
             System.Diagnostics.Debug.WriteLine("INSIDE ADDUSER METHOD");
             string destPath = HttpContext.Current.Server.MapPath(@"~/App_Data/" + userType + "s.xml");
+            string Hashedpass = hashPassword(password);
 
             if (System.IO.File.Exists(destPath))
             {
@@ -122,7 +116,7 @@ namespace Project5
                 System.Xml.XmlNode userName = xd.CreateElement("Username");
                 userName.InnerText = username;
                 System.Xml.XmlNode passWord = xd.CreateElement("Password");
-                passWord.InnerText = password;
+                passWord.InnerText = Hashedpass;
                 addUser.AppendChild(userName);
                 addUser.AppendChild(passWord);
                 System.Diagnostics.Debug.WriteLine("Add the new element to the document...");
@@ -161,6 +155,24 @@ namespace Project5
 
             }
         }
+        protected string hashPassword(string password)
+        {
+            string newPass = "";
+            string salt = "KW?OEfw9";
+            byte[] hashCode;
+            UnicodeEncoding Uce = new UnicodeEncoding(); // UnicodeEncoding object
+            byte[] BytesShort = Uce.GetBytes(password); // convert to byte array
+            SHA1Managed SHhash = new SHA1Managed(); //Create a SHA1 object
+            hashCode = SHhash.ComputeHash(BytesShort); // Hashing 
+            foreach (byte b in hashCode)
+            {
+                newPass += b.ToString();
+            }
+            HashFunctions newHashAction = new HashFunctions();
+            string endPass = newHashAction.HashAlg(newPass, salt);
+            return endPass;
+        }
+
         Boolean originalUserName(string username, string file)
         {
             Boolean result = true;

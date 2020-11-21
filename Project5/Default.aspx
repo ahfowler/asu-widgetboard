@@ -74,20 +74,16 @@
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
-                    <td>Encryption.dll file</td>
+                    <td>Hashing.dll file</td>
                     <td>
-                        This file contains the functions for encoding and decoding usernames and passwords.
+                        This file contains the functions for encoding users' passwords.
                         <br />
-                        <b>encryptCredential()</b><br />
-                        <u>Parameters</u>: <samp>string credential</samp><br />
-                        <u>Return Type</u>:  <samp>string</samp> representing the encrypted credential
-                        <br />
-                        <b>decryptCredential()</b><br />
-                        <u>Parameters</u>: <samp>string encryptedCredential</samp><br />
-                        <u>Return Type</u>:  <samp>string</samp> representing the decrypted credential
+                        <b>HashAlg</b><br />
+                        <u>Parameters</u>: <samp>string password</samp><br />
+                        <u>Return Type</u>:  <samp>string</samp> representing the hashed password
                     </td>
-                    <td><u>Resources</u>: C# class and methods for encryptCredential() and decryptCredential()<br />
-                        <u>Usage</u>: This is used in the Login.aspx page for verifying user-inputted credentials.
+                    <td><u>Resources</u>: C# class and methods for creating Security library with HashAlg function<br />
+                        <u>Usage</u>: This is used in the Login.aspx page for securing and verifying user-inputted credentials.
                     </td>
                 </tr>
                 <!-- Data Management -->
@@ -198,16 +194,16 @@
                         <u>Return Type</u>: <samp> List < string ></samp> of news articles
                     </td>
                     <td>This service returns the latest news articles relating to Arizona State University with dates and links to the articles.</td>
-                    <td><a class="btn btn-default" href="/Member/Dashboard">TryIt</a></td>
+                    <td><a class="btn btn-default" href="/TryItPages/NewsTryIt">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
                     <td>Weather Service</td>
-                    <td><u>Parameters</u>: <samp> Integer zip code</samp><br />
+                    <td><u>Parameters</u>: N/A<br />
                         <u>Return Type</u>: <samp>XML </samp> holding five day weather forecast
                     </td>
-                    <td>This service returns the 5-day weather forecast for the area of the given zipcode.</td>
-                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                    <td>This service returns the 5-day weather forecast for the area for Tempe, Arizona.</td>
+                    <td><a class="btn btn-default" href="/TryItPages/WeatherTryIt">TryIt</a></td>
                 </tr>
             </tbody>
         </table>
