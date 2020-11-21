@@ -212,9 +212,9 @@
                     <td>Kaitlyn Allen</td>
                     <td>Weather Service</td>
                     <td><u>Parameters</u>: N/A<br />
-                        <u>Return Type</u>: <samp>XML </samp> holding five day weather forecast
+                        <u>Return Type</u>: <samp>JSON file </samp> holding 16-day weather forecast
                     </td>
-                    <td>This service returns the 5-day weather forecast for the area for Tempe, Arizona.</td>
+                    <td>This service returns a 16-day weather forecast for the area for Tempe, Arizona. The results are narrowed to only display five days.</td>
                     <td><a class="btn btn-default" href="/TryItPages/WeatherTryIt">TryIt</a></td>
                 </tr>
             </tbody>

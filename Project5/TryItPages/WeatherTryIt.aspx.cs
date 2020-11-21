@@ -12,7 +12,13 @@ namespace Project5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            WeatherService.ServiceClient weatherProxy = new WeatherService.ServiceClient();
+            var weatherForecast = weatherProxy.GetForecast();
 
+            foreach(string day in weatherForecast)
+            {
+                weatherResults.Text += day;
+            }
         }
     }
 }
