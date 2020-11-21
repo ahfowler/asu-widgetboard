@@ -12,7 +12,12 @@ namespace Project5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            NewsService.ServiceClient newsProxy = new NewsService.ServiceClient();
+            var newsList = newsProxy.GetNewsList();
+            foreach(string article in newsList)
+            {
+                newsResults.Text += article;
+            }
         }
     }
 }
