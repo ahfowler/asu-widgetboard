@@ -60,7 +60,7 @@
                     <td>Login.aspx page</td>
                     <td>This is the log in and register page that utilizes forms-based security for the user control.</td>
                     <td><u>Resources</u>: GUI design code, C# code behind GUI, and the decryption/encryption function from Decryption.dll file.<br />
-                        <u>Usage</u>: Staff page for application.
+                        <u>Usage</u>: This page is used as a "blocker" for unauthenticated users who try to access the Dashboard.aspx or Settings.aspx. It also serves as a "blocker" for unauthorized users who try to access the Settings.aspx page. It contains the logInFunction and logInAuthenticate functionality.
                     </td>
                 </tr>
                 <!-- Local Component -->
@@ -95,8 +95,8 @@
                     <td>Azaria Fowler</td>
                     <td>User profile cookie</td>
                     <td>This cookie contains the currently logged in user's information (username and password).</td>
-                    <td><u>Resources</u>: -<br />
-                        <u>Usage</u>: -
+                    <td><u>Resources</u>: None<br />
+                        <u>Usage</u>: Implicitly used in the web-based form used to authenticate users in Login.aspx.
                     </td>
                 </tr>
                 <tr>
@@ -117,7 +117,7 @@
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
-                    <td>Admins.xml file</td>
+                    <td>Administrators.xml file</td>
                     <td>This file contains all of the usernames and passwords of pre-approved admins that can edit the contents of the ASU WidgetBoard.</td>
                     <td><u>Resources</u>: A plain text file written in XML language. <br />
                         <u>Usage</u>: This is linked to the Login.aspx page and the encrpytion/decryption function.
@@ -162,7 +162,7 @@
                         <u>Return Type</u>: the file path to the file with the symbol price pairs
                     </td>
                     <td>This service utilizes stock data from Finnhub and finds the open price of each stock symbol from the US stock market. It then creates and saves a file with 50 random symbol price pairs (symbol, open price) in a file. This service returns the file path to the saved file of symbol price pairs.</td>
-                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                    <td><a class="btn btn-default" href="/TryItPages/StocksTryIt">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -171,7 +171,7 @@
                         <u>Return Type</u>:  <samp>string</samp> representing the stock price of the symbol
                     </td>
                     <td>This service reads a file of symbol price pairs and returns the stock price of the given stock symbol. The user can manually type a stock symbol or a select one from a list of valid stock symbols.</td>
-                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                    <td><a class="btn btn-default" href="/TryItPages/StocksTryIt">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -180,7 +180,7 @@
                         <u>Return Type</u>:  <samp>string</samp> representing the current horoscope reading of the sign
                     </td>
                     <td>This service takes a sign (i.e. capricorn, leo, etc.) and returns their current horoscope readings.</td>
-                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                    <td><a class="btn btn-default" href="/Member/Dashboard">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -189,7 +189,7 @@
                         <u>Return Type</u>: <samp>List < string ></samp> representing a list of games involving the Phoenix Suns'
                     </td>
                     <td>This service returns a list of 25 most recent Phoenix Suns' games from 1960-2000.</td>
-                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                    <td><a class="btn btn-default" href="/Member/Dashboard">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
@@ -198,7 +198,7 @@
                         <u>Return Type</u>: <samp> List < string ></samp> of news articles
                     </td>
                     <td>This service returns the latest news articles relating to Arizona State University with dates and links to the articles.</td>
-                    <td><a class="btn btn-default" href="http://webstrar29.fulton.asu/Default.aspx">TryIt</a></td>
+                    <td><a class="btn btn-default" href="/Member/Dashboard">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
