@@ -47,7 +47,7 @@
                     <table style="width:100%;">
                         <tr>
                             <td><b>Username: </b></td>
-                            <td><asp:TextBox ID="registerUsername" runat="server" Width="100%"></asp:TextBox></td>
+                            <td><asp:TextBox ID="registerUsername" runat="server" Width="100%" TextMode="SingleLine"></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td><b>Password: </b></td>
@@ -67,7 +67,8 @@
                 </asp:RadioButtonList>
                 <br />
                 <div style="text-align:center;">
-                <a class="btn btn-default">Register</a>
+                <asp:Button CssClass="btn btn-default" OnClick="fieldsValidation" ID="registerButton" runat="server" Text="Register" /><br />
+                <asp:Label ID="registerErrorMessage" runat="server" Text="" CssClass="text-danger"></asp:Label>
                 </div>
 
             </div>
@@ -145,6 +146,98 @@
             }
 
             return userType;
+        }
+
+        void fieldsValidation(Object sender, EventArgs e)
+        {
+            if (registerUsername.Text.Equals("") || registerConfirmPassword.Text.Equals("") || registerPassword.Text.Equals("") || accountTypeRadioButtons.SelectedItem==null)
+            {
+                registerErrorMessage.Text = "All fields required.";
+                if (registerUsername.Text.Equals(""))
+                {
+                    registerUsername.BackColor= System.Drawing.Color.FromArgb(252, 199, 187);
+                }
+                if (registerPassword.Text.Equals(""))
+                {
+                    registerPassword.BackColor= System.Drawing.Color.FromArgb(252, 199, 187);
+                }
+                if (registerConfirmPassword.Text.Equals(""))
+                {
+                    registerConfirmPassword.BackColor= System.Drawing.Color.FromArgb(252, 199, 187);
+                }
+            }
+            else
+            {
+                if (registerPassword.Text.Equals(registerConfirmPassword.Text))
+                {
+                    string userType = accountTypeRadioButtons.SelectedValue;
+                    addUser(registerUsername.Text, registerPassword.Text, userType);
+                    FormsAuthentication.RedirectFromLoginPage(registerUsername.Text, rememberMeCheckBox.Checked);
+                }
+                else
+                {
+                    registerErrorMessage.Text = "Passwords must match.";
+                }
+            }
+
+        }
+
+        void addUser(string username, string password, string userType)
+        {
+            System.Diagnostics.Debug.WriteLine("INSIDE ADDUSER METHOD");
+            string destPath = HttpContext.Current.Server.MapPath(@"~/App_Data/" + userType + "s.xml");
+
+            if (System.IO.File.Exists(destPath))
+            {
+                System.IO.FileStream fs = new System.IO.FileStream(destPath, System.IO.FileMode.Open);
+                System.Xml.XmlDocument xd = new System.Xml.XmlDocument();
+                xd.Load(fs);
+
+                System.Xml.XmlNode addUser = xd.CreateElement("element", userType, "");
+                System.Xml.XmlNode userName = xd.CreateElement("Username");
+                userName.InnerText = username;
+                System.Xml.XmlNode passWord = xd.CreateElement("Password");
+                passWord.InnerText = password;
+                addUser.AppendChild(userName);
+                addUser.AppendChild(passWord);
+                System.Diagnostics.Debug.WriteLine("Add the new element to the document...");
+                System.Xml.XmlElement root = xd.DocumentElement;
+                root.AppendChild(addUser);
+                System.Diagnostics.Debug.WriteLine("Display the modified XML document...");
+                System.Diagnostics.Debug.WriteLine(xd.OuterXml);
+                fs.Position = 0;
+                xd.Save(fs);
+                fs.Close();
+
+                if (userType.Equals("Administrator"))
+                {
+                    destPath = HttpContext.Current.Server.MapPath(@"~/Staff/Web.config");
+                    if (System.IO.File.Exists(destPath))
+                    {
+                        System.IO.FileStream fsA = new System.IO.FileStream(destPath, System.IO.FileMode.Open);
+                        System.Xml.XmlDocument xdA = new System.Xml.XmlDocument();
+                        xdA.Load(fs);
+
+                        /*
+                        System.Xml.XmlNode addUser = xd.CreateElement("element", userType, "");
+                        System.Xml.XmlNode userName = xd.CreateElement("Username");
+                        userName.InnerText = username;
+                        System.Xml.XmlNode passWord = xd.CreateElement("Password");
+                        passWord.InnerText = password;
+                        addUser.AppendChild(userName);
+                        addUser.AppendChild(passWord);
+                        System.Diagnostics.Debug.WriteLine("Add the new element to the document...");
+                        System.Xml.XmlElement root = xd.DocumentElement;
+                        root.AppendChild(addUser);
+                        System.Diagnostics.Debug.WriteLine("Display the modified XML document...");
+                        System.Diagnostics.Debug.WriteLine(xd.OuterXml);
+                        fs.Position = 0;
+                        xd.Save(fs);
+                        fs.Close();
+                        */
+                    }
+                }
+            }
         }
     </script>
 </asp:Content>

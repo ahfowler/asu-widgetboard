@@ -103,8 +103,8 @@
                     <td>Kaitlyn Allen</td>
                     <td>Zodiac sign session state</td>
                     <td>This is a temprary state that contains the previously selected zodiac sign within a session.</td>
-                    <td><u>Resources</u>: -<br />
-                        <u>Usage</u>: -
+                    <td><u>Resources</u>: Uses C# class and methods to track session state and retain information about selected horoscope reading and values.<br />
+                        <u>Usage</u>: This is used in the Dashboard.aspx page to retain user-selected information.
                     </td>
                 </tr>
                 <tr>
@@ -121,6 +121,14 @@
                     <td>This file contains all of the usernames and passwords of pre-approved admins that can edit the contents of the ASU WidgetBoard.</td>
                     <td><u>Resources</u>: A plain text file written in XML language. <br />
                         <u>Usage</u>: This is linked to the Login.aspx page and the encrpytion/decryption function.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Kaitlyn Allen</td>
+                    <td>XML file manipulation (adding users)</td>
+                    <td>This is a process that allows Staff members to add new users and log-in information.</td>
+                    <td><u>Resources</u>: - <br />
+                        <u>Usage</u>: This is used in the Login.aspx page and the encrpytion/decryption function to store new user information.
                     </td>
                 </tr>
             </tbody>

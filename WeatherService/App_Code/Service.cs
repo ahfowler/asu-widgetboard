@@ -9,6 +9,7 @@ using System.Security.Policy;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Web;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service" in code, svc and config file together.
 public class Service : IService
@@ -43,11 +44,11 @@ public class Service : IService
 			//string dt = DateTime.Parse(day.dt).ToString("yyyy-MM-dd");
 			System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
 			dtDateTime = dtDateTime.AddSeconds(Convert.ToDouble(day.dt));
-
+			string weatherImage = day.weather[0].id + ", " + day.weather[0].icon;
 			string dayReport =
 				@"<div> <h5><b>" + dtDateTime.DayOfWeek +"</b></h5>"+
                     "<hr/>" +
-					"<img src='http://openweathermap.org/img/wn/"+ day.weather[0].icon+ "@2x.png'/>"+
+					"<img src='"+ getWeatherImage(weatherImage)+ "' style='height: 100px; width:100px;'/>" +
 					"<p>"+day.weather[0].description+"<p>"+
                     "<h3>" + Convert.ToInt32(day.temp.day) +"&#176</h3>"+
                     "<h5>"+ Convert.ToInt32(day.temp.min) +"&#176 / "+ Convert.ToInt32(day.temp.max) + "&#176</h5>"+
@@ -94,11 +95,11 @@ public class Service : IService
 		todaysReport = todayReport[0];
 		System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
 		dtDateTime = dtDateTime.AddSeconds(Convert.ToDouble(todaysReport.dt));
-
+		string weatherImage = todaysReport.weather[0].id + ", " + todaysReport.weather[0].icon;
 		string dayReport =
 				@"<div style='display: flex; justify-content: space-around; margin-bottom: 20px; margin-top: 20px; '>"+
 				"<div style='text-align: center;'>"+
-				"<img src='http://openweathermap.org/img/wn/"+ todaysReport.weather[0].icon+"@2x.png' style='max-height: 250px;'/>"+
+				"<img src='"+ getWeatherImage(weatherImage) +"' style='height: 100px; width:100px;'/>"+
 				"<h5>"+ todaysReport.weather[0].description+" </h5>"+
 				"</div>"+
 				"<div style='text-align: center;'>"+
@@ -114,6 +115,41 @@ public class Service : IService
 
 		return dayReport;
 		//return html;
+	}
+
+	public string getWeatherImage(string weatherCode)
+	{
+		string destPath = HttpContext.Current.Server.MapPath(@"~/App_Data/WeatherIcons.txt");
+
+		if (File.Exists(destPath))
+		{
+			// Reads file line by line 
+			StreamReader Textfile = new StreamReader(destPath);
+
+			string line = Textfile.ReadLine();
+
+			while (line != null)
+			{
+				string[] weatherImages = line.Split(';');
+				if (weatherImages[0] == weatherCode)
+				{
+					Textfile.Close();
+					return weatherImages[1].Trim();
+				}
+				else
+				{
+					line = Textfile.ReadLine();
+				}
+			}
+
+			Textfile.Close();
+
+			return "The given weather code was not found.";
+		}
+		else
+		{
+			return "The weather images file was not found.";
+		}
 	}
 
 }

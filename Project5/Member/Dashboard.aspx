@@ -17,19 +17,6 @@
 
         <div ID="WeatherSection" style="min-width: 70%; margin-left: 10px;">
             <h3>Weather Forecast</h3>
-            <!-- https://rapidapi.com/stefan.skliarov/api/AccuWeather?endpoint=apiendpoint_200c1560-f967-11e7-847f-a7b04b853fafgetDailyForecastByLocationKey
-            <div style="display: flex; justify-content: space-around; margin-bottom: 20px; margin-top: 20px;">
-                <div style="text-align: center;">
-                    <img  ID="TodayImage" src="https://www.flaticon.com/svg/static/icons/svg/1163/1163661.svg" style="max-height: 150px;" />
-                    <h5 id="TodayWeather">Partly Cloudy</h5>
-                </div>
-                <div style="text-align: center;">
-                    <h4><b>MONDAY</b> | NOVEMBER 16TH, 2020</h4>
-                    <p>Tempe, Arizona</p>
-                    <hr />
-                    <h3>45&#176</h3>
-                    <h5>54&#176 / 89&#176</h5>
-                </div>-->
             <asp:Label ID="todaysWeather" runat="server"></asp:Label>
             <div style="display: flex; justify-content: space-between; padding: 15px;">
                 <asp:Label style="background-color: #f8f8f8; text-align: center; padding: 10px; border-radius: 5px;" ID="Weather1" runat="server"></asp:Label>
@@ -89,5 +76,7 @@
             </div>
         </div>
     </div>
-
+    <footer>
+        <p>Weather icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+    </footer>
 </asp:Content>
