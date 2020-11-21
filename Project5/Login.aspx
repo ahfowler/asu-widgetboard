@@ -170,9 +170,17 @@
             {
                 if (registerPassword.Text.Equals(registerConfirmPassword.Text))
                 {
-                    string userType = accountTypeRadioButtons.SelectedValue;
-                    addUser(registerUsername.Text, registerPassword.Text, userType);
-                    FormsAuthentication.RedirectFromLoginPage(registerUsername.Text, rememberMeCheckBox.Checked);
+                    if (originalUserName(registerUsername.Text, accountTypeRadioButtons.SelectedValue))
+                    {
+                        string userType = accountTypeRadioButtons.SelectedValue;
+                        addUser(registerUsername.Text, registerPassword.Text, userType);
+                        FormsAuthentication.RedirectFromLoginPage(registerUsername.Text, rememberMeCheckBox.Checked);
+                    }
+                    else
+                    {
+                        registerErrorMessage.Text = "User already exists!";
+                    }
+
                 }
                 else
                 {
@@ -221,7 +229,7 @@
                         String prevList;
                         foreach (System.Xml.XmlNode node in rootA)
                         {
-                             prevList = node.Attributes["users"].Value;
+                            prevList = node.Attributes["users"].Value;
                             node.Attributes["users"].Value = prevList + "," + username;
                         }
                         //System.Diagnostics.Debug.WriteLine("Add the new element to the document...");
@@ -235,6 +243,34 @@
                 fs.Close();
 
             }
+        }
+        Boolean originalUserName(string username, string file)
+        {
+            Boolean result = true;
+            string destPath = HttpContext.Current.Server.MapPath(@"~/App_Data/"+file+"s.xml");
+
+            if (System.IO.File.Exists(destPath))
+            {
+                System.IO.FileStream fs = new System.IO.FileStream(destPath, System.IO.FileMode.Open);
+                System.Xml.XmlDocument xd = new System.Xml.XmlDocument();
+                xd.Load(fs);
+                System.Xml.XmlNode root = xd;
+                System.Xml.XmlNodeList document = root.ChildNodes;
+                System.Xml.XmlNodeList userList = document[1].ChildNodes;
+                foreach(System.Xml.XmlNode user in userList)
+                {
+                    System.Xml.XmlNodeList credentials = user.ChildNodes;
+
+                    if (credentials[0].InnerText == username)
+                    {
+                        result = false;
+                        break;
+                    }
+                }
+                fs.Close();
+            }
+
+            return result;
         }
     </script>
 </asp:Content>

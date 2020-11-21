@@ -28,30 +28,42 @@
                 </div>
                 <br />
                 <div style="text-align:center;">
-                <a class="btn btn-default">Register</a>
+                <asp:Button CssClass="btn btn-default" OnClick="fieldValidation" ID="registerButton" runat="server" Text="Register" /><br />
+                <asp:Label ID="registerErrorMessage" runat="server" Text="" CssClass="text-danger"></asp:Label>
                 </div>
-
             </div>
         </div>
         </div>
-
         <div style="min-width: 70%; margin-left: 10px;">
-            <h3 style="text-align:center;">Configure Dashboard Settings</h3>
+            <h2 style="text-align:center;">Dashboard Info</h2>
            <div style="width:100%;">
             <div style="max-width:100%;border: solid 1px #cccccc;border-radius:5px;padding:5px;text-align:left;">
                 <hr />
-                <div style="max-width:50%; padding:10px;">
-                    <h3>Change Widget View</h3>
-                    <hr />
-                    <asp:CheckBox ID="viewStocks" runat="server" Text="Stocks" Checked="True"/><br />
-                    <asp:CheckBox ID="viewWeather" runat="server" Text="Weather" Checked="True"/><br />
-                    <asp:CheckBox ID="viewNews" runat="server" Text="News" Checked="True"/><br />
-                    <asp:CheckBox ID="viewSports" runat="server" Text="Sports" Checked="True"/><br />
-                    <asp:CheckBox ID="viewScope" runat="server" Text="Horoscope" Checked="True"/><br />
-                    <asp:Button ID="save" class="btn btn-primary navbar-btn" runat="server" Text="Save Changes" OnClick="save_Click" PostBackUrl="~/Member/Dashboard.aspx" />
+                <div style="max-width:50%; padding:10px; ">
+                    <h3 style="text-align:center">View Members</h3>
+                    <div style="display:flex; justify-content:center">
+                    <div style="padding:10px;">
+                        <h4>Students</h4>
+                        <asp:TextBox  ID="studentsView" runat="server" ReadOnly="True" AutoPostBack="False" TextMode="MultiLine" style="height:100px; max-height:100px; resize:none; padding:10px; box-shadow: 5px 5px 20px #ccc; border:none; "></asp:TextBox>
+                     </div>
+                    <div style="padding:10px;">
+                        <h4>Administrators</h4>
+                        <asp:TextBox ID="adminView" runat="server" ReadOnly="True" AutoPostBack="False" TextMode="MultiLine" style="height:100px; max-height:100px; resize:none; padding:10px; box-shadow: 5px 5px 20px #ccc; border:none;"></asp:TextBox>
+                    </div>
                 </div>
+                 </div>
+                
                 </div>
                </div>
         </div>
     </div>
+    <style>
+        .scrollbar{
+            width:10px;
+            color: red;
+
+        }
+    </style>
 </asp:Content>
+
+

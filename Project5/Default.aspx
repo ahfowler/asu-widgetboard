@@ -127,7 +127,7 @@
                     <td>Kaitlyn Allen</td>
                     <td>XML file manipulation (adding users)</td>
                     <td>This is a process that allows Staff members to add new users and log-in information.</td>
-                    <td><u>Resources</u>: - <br />
+                    <td><u>Resources</u>: Web.config file under Staff page<br />
                         <u>Usage</u>: This is used in the Login.aspx page and the encrpytion/decryption function to store new user information.
                     </td>
                 </tr>

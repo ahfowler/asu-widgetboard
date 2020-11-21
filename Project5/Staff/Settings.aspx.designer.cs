@@ -42,57 +42,39 @@ namespace Project5
         protected global::System.Web.UI.WebControls.TextBox registerConfirmPassword;
 
         /// <summary>
-        /// viewStocks control.
+        /// registerButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox viewStocks;
+        protected global::System.Web.UI.WebControls.Button registerButton;
 
         /// <summary>
-        /// viewWeather control.
+        /// registerErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox viewWeather;
+        protected global::System.Web.UI.WebControls.Label registerErrorMessage;
 
         /// <summary>
-        /// viewNews control.
+        /// studentsView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox viewNews;
+        protected global::System.Web.UI.WebControls.TextBox studentsView;
 
         /// <summary>
-        /// viewSports control.
+        /// adminView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox viewSports;
-
-        /// <summary>
-        /// viewScope control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox viewScope;
-
-        /// <summary>
-        /// save control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button save;
+        protected global::System.Web.UI.WebControls.TextBox adminView;
     }
 }
