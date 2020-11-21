@@ -207,7 +207,7 @@
                 System.Diagnostics.Debug.WriteLine(xd.OuterXml);
                 fs.Position = 0;
                 xd.Save(fs);
-                fs.Close();
+
 
                 if (userType.Equals("Administrator"))
                 {
@@ -216,27 +216,24 @@
                     {
                         System.IO.FileStream fsA = new System.IO.FileStream(destPath, System.IO.FileMode.Open);
                         System.Xml.XmlDocument xdA = new System.Xml.XmlDocument();
-                        xdA.Load(fs);
-
-                        /*
-                        System.Xml.XmlNode addUser = xd.CreateElement("element", userType, "");
-                        System.Xml.XmlNode userName = xd.CreateElement("Username");
-                        userName.InnerText = username;
-                        System.Xml.XmlNode passWord = xd.CreateElement("Password");
-                        passWord.InnerText = password;
-                        addUser.AppendChild(userName);
-                        addUser.AppendChild(passWord);
-                        System.Diagnostics.Debug.WriteLine("Add the new element to the document...");
-                        System.Xml.XmlElement root = xd.DocumentElement;
-                        root.AppendChild(addUser);
-                        System.Diagnostics.Debug.WriteLine("Display the modified XML document...");
-                        System.Diagnostics.Debug.WriteLine(xd.OuterXml);
-                        fs.Position = 0;
-                        xd.Save(fs);
-                        fs.Close();
-                        */
+                        xdA.Load(fsA);
+                        System.Xml.XmlNodeList rootA = xdA.GetElementsByTagName("allow");
+                        String prevList;
+                        foreach (System.Xml.XmlNode node in rootA)
+                        {
+                             prevList = node.Attributes["users"].Value;
+                            node.Attributes["users"].Value = prevList + "," + username;
+                        }
+                        //System.Diagnostics.Debug.WriteLine("Add the new element to the document...");
+                        //System.Diagnostics.Debug.WriteLine("Display the modified XML document...");
+                        //System.Diagnostics.Debug.WriteLine(xdA.OuterXml);
+                        fsA.Position = 0;
+                        xdA.Save(fsA);
+                        fsA.Close();
                     }
                 }
+                fs.Close();
+
             }
         }
     </script>
