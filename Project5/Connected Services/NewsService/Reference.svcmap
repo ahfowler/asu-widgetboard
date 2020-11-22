@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:49206/Service.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://webstrar29.fulton.asu.edu/Page5/NewsFeed.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="c211c741-9d90-4c3c-943e-473f1b9ab2c1" SourceId="1" SourceUrl="http://localhost:49206/Service.svc?wsdl" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="ebcc9157-258a-467a-9442-8062a0dd66e6" SourceId="1" SourceUrl="http://localhost:49206/Service.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="4ec2243b-5c18-495e-975c-dc07f05d8d3d" SourceId="1" SourceUrl="http://localhost:49206/Service.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="ea342e73-be6c-4885-9b28-cbf123355701" SourceId="1" SourceUrl="http://localhost:49206/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="NewsFeed.xsd" MetadataType="Schema" ID="f2b9f443-1245-46d7-82f9-5ee401e17990" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page5/NewsFeed.svc?xsd=xsd2" />
+    <MetadataFile FileName="NewsFeed1.xsd" MetadataType="Schema" ID="67b8ab09-9044-4f5d-b0e7-ed97c11d8c9d" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page5/NewsFeed.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="01eabb24-aff3-417f-bcb4-6b1228d160c6" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page5/NewsFeed.svc?wsdl" />
+    <MetadataFile FileName="NewsFeed2.xsd" MetadataType="Schema" ID="095a682f-4d70-44a9-815e-d4d7c885d183" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page5/NewsFeed.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

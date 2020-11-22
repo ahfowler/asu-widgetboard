@@ -16,7 +16,7 @@
                     <th colspan="4" style="text-align: center;background-color:#f8f8f8"><h3>Application and Components Summary Table</h3></th>
                 </tr>
                 <tr>
-                    <th colspan="4">The application is deployed at: <a href="http://webstrar29.fulton.asu/Default.aspx">http://webstrar29.fulton.asu/Default.aspx</a></th>
+                    <th colspan="4">The application is deployed at: <a href="http://webstrar29.fulton.asu/page10/Default.aspx">http://webstrar29.fulton.asu/Default.aspx</a></th>
                 </tr>
                 <tr>
                     <th colspan="4">Percentage of Contribution: Azaria Fowler: 70% + Kaitlyn Allen: 30%</th>

@@ -19,13 +19,12 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:59666/Service.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://webstrar29.fulton.asu.edu/Page1/Horoscope.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="c54b6c9d-8831-4251-bd0f-91192b13f926" SourceId="1" SourceUrl="http://localhost:59666/Service.svc?wsdl" />
-    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="771a1283-0f28-4fe5-bb23-01c327810031" SourceId="1" SourceUrl="http://localhost:59666/Service.svc?disco" />
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="6400e936-0c48-4aad-bc4d-f3d4a4eced1b" SourceId="1" SourceUrl="http://localhost:59666/Service.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="aafb69c1-2ae1-47a7-83a6-2820399a054b" SourceId="1" SourceUrl="http://localhost:59666/Service.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="2d39a04d-61bb-4d3b-9688-4dd3e951e94a" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page1/Horoscope.svc?wsdl" />
+    <MetadataFile FileName="Horoscope.xsd" MetadataType="Schema" ID="a18e20a8-6422-4868-bfc6-9b4896de4af5" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page1/Horoscope.svc?xsd=xsd1" />
+    <MetadataFile FileName="Horoscope1.xsd" MetadataType="Schema" ID="0b69f2c5-2f50-46ce-ac28-cadc0412c203" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page1/Horoscope.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

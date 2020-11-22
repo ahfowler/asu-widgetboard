@@ -21,14 +21,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:63465/Service.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://webstrar29.fulton.asu.edu/Page3/PhoenixSuns.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="3d170cb9-0774-4e41-9283-2e0023165106" SourceId="1" SourceUrl="http://localhost:63465/Service.svc?wsdl" />
-    <MetadataFile FileName="Service.disco" MetadataType="Disco" ID="a0794e60-3801-4509-96ca-439d365d6754" SourceId="1" SourceUrl="http://localhost:63465/Service.svc?disco" />
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="beae93d9-ebe5-43dc-8e43-63e36c320ed0" SourceId="1" SourceUrl="http://localhost:63465/Service.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="d03f6cd7-48f2-4b2c-97f0-c595630092a5" SourceId="1" SourceUrl="http://localhost:63465/Service.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="fd36a620-9f01-445b-b380-0f47bf0968f5" SourceId="1" SourceUrl="http://localhost:63465/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="PhoenixSuns.xsd" MetadataType="Schema" ID="3f2682c9-072a-4350-a433-fac9ebbd8733" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page3/PhoenixSuns.svc?xsd=xsd2" />
+    <MetadataFile FileName="PhoenixSuns1.xsd" MetadataType="Schema" ID="521d7bc9-92d9-46d8-9ad3-fbe512708712" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page3/PhoenixSuns.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="01cad52a-333b-43b7-be59-e5a98b095dea" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page3/PhoenixSuns.svc?wsdl" />
+    <MetadataFile FileName="PhoenixSuns2.xsd" MetadataType="Schema" ID="354e1e66-be6f-4866-aaf3-553980798613" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page3/PhoenixSuns.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

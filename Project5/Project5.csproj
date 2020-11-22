@@ -107,48 +107,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\DailyHoroscope\Service.wsdl" />
-    <None Include="Connected Services\DailyHoroscope\Service.xsd">
+    <None Include="Connected Services\DailyHoroscope\Horoscope.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\DailyHoroscope\Service1.xsd">
+    <None Include="Connected Services\DailyHoroscope\Horoscope1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\NewsService\Service.wsdl" />
-    <None Include="Connected Services\NewsService\Service.xsd">
+    <None Include="Connected Services\DailyHoroscope\Service1.wsdl" />
+    <None Include="Connected Services\NewsService\NewsFeed.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\NewsService\Service1.xsd">
+    <None Include="Connected Services\NewsService\NewsFeed1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\NewsService\Service3.xsd">
+    <None Include="Connected Services\NewsService\NewsFeed2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\PhoenixSunsSchedule\Service.wsdl" />
-    <None Include="Connected Services\PhoenixSunsSchedule\Service.xsd">
+    <None Include="Connected Services\NewsService\Service1.wsdl" />
+    <None Include="Connected Services\PhoenixSunsSchedule\PhoenixSuns.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\PhoenixSunsSchedule\Service1.xsd">
+    <None Include="Connected Services\PhoenixSunsSchedule\PhoenixSuns1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\PhoenixSunsSchedule\Service2.xsd">
+    <None Include="Connected Services\PhoenixSunsSchedule\PhoenixSuns2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\StockBuildAndQuote\Service.disco" />
+    <None Include="Connected Services\PhoenixSunsSchedule\Service1.wsdl" />
     <None Include="Connected Services\StockBuildAndQuote\configuration91.svcinfo" />
     <None Include="Connected Services\StockBuildAndQuote\configuration.svcinfo" />
     <None Include="Connected Services\StockBuildAndQuote\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\DailyHoroscope\Service.disco" />
     <None Include="Connected Services\DailyHoroscope\configuration91.svcinfo" />
     <None Include="Connected Services\DailyHoroscope\configuration.svcinfo" />
     <None Include="Connected Services\DailyHoroscope\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\PhoenixSunsSchedule\Service.disco" />
     <None Include="Connected Services\PhoenixSunsSchedule\configuration91.svcinfo" />
     <None Include="Connected Services\PhoenixSunsSchedule\configuration.svcinfo" />
     <None Include="Connected Services\PhoenixSunsSchedule\Reference.svcmap">
@@ -160,6 +157,13 @@
     <None Include="Connected Services\NewsService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\StockBuildAndQuote\Service1.wsdl" />
+    <None Include="Connected Services\StockBuildAndQuote\Stocks.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StockBuildAndQuote\Stocks1.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\WeatherService\configuration91.svcinfo" />
     <None Include="Connected Services\WeatherService\configuration.svcinfo" />
@@ -193,25 +197,18 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="Connected Services\StockBuildAndQuote\Service.wsdl" />
-    <None Include="Connected Services\StockBuildAndQuote\Service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\StockBuildAndQuote\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Member\Web.config" />
-    <None Include="Connected Services\WeatherService\Service.wsdl" />
-    <None Include="Connected Services\WeatherService\Service.xsd">
+    <None Include="Connected Services\WeatherService\Service1.wsdl" />
+    <None Include="Connected Services\WeatherService\Weather.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WeatherService\Service1.xsd">
+    <None Include="Connected Services\WeatherService\Weather1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WeatherService\Service2.xsd">
+    <None Include="Connected Services\WeatherService\Weather2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WeatherService\Service3.xsd">
+    <None Include="Connected Services\WeatherService\Weather3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

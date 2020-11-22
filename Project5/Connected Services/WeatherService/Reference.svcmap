@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:52154/Service.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://webstrar29.fulton.asu.edu/Page6/Weather.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="bc4b5bb4-ef95-4b29-b63f-2b6eaa567149" SourceId="1" SourceUrl="http://localhost:52154/Service.svc?wsdl" />
-    <MetadataFile FileName="Service.xsd" MetadataType="Schema" ID="fe1b89d8-4a61-4042-8f11-6e3695dbd09c" SourceId="1" SourceUrl="http://localhost:52154/Service.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service3.xsd" MetadataType="Schema" ID="be0b0980-f199-46c4-8064-c8429787ff3e" SourceId="1" SourceUrl="http://localhost:52154/Service.svc?xsd=xsd3" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="93926633-98f8-45ef-aef0-3bfccbfe8911" SourceId="1" SourceUrl="http://localhost:52154/Service.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service2.xsd" MetadataType="Schema" ID="1a5eb128-31c9-4c58-a4d4-34fc4b78a98f" SourceId="1" SourceUrl="http://localhost:52154/Service.svc?xsd=xsd2" />
+    <MetadataFile FileName="Weather.xsd" MetadataType="Schema" ID="ef1909bc-3924-4854-9eec-fecef5b1155c" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page6/Weather.svc?xsd=xsd1" />
+    <MetadataFile FileName="Weather1.xsd" MetadataType="Schema" ID="d4402402-65c2-47d6-9f50-9593d7ece904" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page6/Weather.svc?xsd=xsd2" />
+    <MetadataFile FileName="Weather2.xsd" MetadataType="Schema" ID="73552bf5-e8af-4e08-bb40-4832143298aa" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page6/Weather.svc?xsd=xsd0" />
+    <MetadataFile FileName="Weather3.xsd" MetadataType="Schema" ID="92060b95-71cc-459a-8bf8-681cfd8c9b10" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page6/Weather.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="de0a7475-8958-4e4d-a5d5-e1503ebc2444" SourceId="1" SourceUrl="http://webstrar29.fulton.asu.edu/Page6/Weather.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
