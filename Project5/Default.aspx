@@ -16,7 +16,7 @@
                     <th colspan="4" style="text-align: center;background-color:#f8f8f8"><h3>Application and Components Summary Table</h3></th>
                 </tr>
                 <tr>
-                    <th colspan="4">The application is deployed at: <a href="http://webstrar29.fulton.asu/page10/Default.aspx">http://webstrar29.fulton.asu/Default.aspx</a></th>
+                    <th colspan="4">The application is deployed at: <a href="http://webstrar29.fulton.asu.edu/Page10/Default.aspx">http://webstrar29.fulton.asu/Page10/Default.aspx</a></th>
                 </tr>
                 <tr>
                     <th colspan="4">Percentage of Contribution: Azaria Fowler: 70% + Kaitlyn Allen: 30%</th>
@@ -91,7 +91,7 @@
                     <td><u>Resources</u>: C# class and methods for creating Security library with HashAlg function<br />
                         <u>Usage</u>: This is used in the Login.aspx page for securing and verifying user-inputted credentials.
                     </td>
-                    <td><a class="btn btn-default" href="/TryItPages/HashTryIt">TryIt</a></td>
+                    <td><a class="btn btn-default" href="TryItPages/HashTryIt">TryIt</a></td>
                 </tr>
                 <!-- Data Management -->
                 <tr>
@@ -137,7 +137,7 @@
                     <td><u>Resources</u>: Web.config file under Staff page<br />
                         <u>Usage</u>: This is used in the Login.aspx page and the encrpytion/decryption function to store new user information.
                     </td>
-                    <td><a class="btn btn-default" href="/TryItPages/XMLTryIt">TryIt</a></td>
+                    <td><a class="btn btn-default" href="~/TryItPages/XMLTryIt">TryIt</a></td>
                 </tr>
             </tbody>
         </table>
@@ -170,7 +170,7 @@
                         <u>Return Type</u>: the file path to the file with the symbol price pairs
                     </td>
                     <td>This service utilizes stock data from Finnhub and finds the open price of each stock symbol from the US stock market. It then creates and saves a file with 50 random symbol price pairs (symbol, open price) in a file. This service returns the file path to the saved file of symbol price pairs.</td>
-                    <td><a class="btn btn-default" href="/TryItPages/StocksTryIt">TryIt</a></td>
+                    <td><a class="btn btn-default" href="~/TryItPages/StocksTryIt">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -179,7 +179,7 @@
                         <u>Return Type</u>:  <samp>string</samp> representing the stock price of the symbol
                     </td>
                     <td>This service reads a file of symbol price pairs and returns the stock price of the given stock symbol. The user can manually type a stock symbol or a select one from a list of valid stock symbols.</td>
-                    <td><a class="btn btn-default" href="/TryItPages/StocksTryIt">TryIt</a></td>
+                    <td><a class="btn btn-default" href="~/TryItPages/StocksTryIt">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -188,7 +188,7 @@
                         <u>Return Type</u>:  <samp>string</samp> representing the current horoscope reading of the sign
                     </td>
                     <td>This service takes a sign (i.e. capricorn, leo, etc.) and returns their current horoscope readings.</td>
-                    <td><a class="btn btn-default" href="/Member/Dashboard">TryIt</a></td>
+                    <td><a class="btn btn-default" href="~/Member/Dashboard">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Azaria Fowler</td>
@@ -197,7 +197,7 @@
                         <u>Return Type</u>: <samp>List < string ></samp> representing a list of games involving the Phoenix Suns'
                     </td>
                     <td>This service returns a list of 25 most recent Phoenix Suns' games from 1960-2000.</td>
-                    <td><a class="btn btn-default" href="/Member/Dashboard">TryIt</a></td>
+                    <td><a class="btn btn-default" href="~/Member/Dashboard">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
@@ -206,7 +206,7 @@
                         <u>Return Type</u>: <samp> List < string ></samp> of news articles
                     </td>
                     <td>This service returns the latest news articles relating to Arizona State University with dates and links to the articles.</td>
-                    <td><a class="btn btn-default" href="/TryItPages/NewsTryIt">TryIt</a></td>
+                    <td><a class="btn btn-default" href="~/TryItPages/NewsTryIt">TryIt</a></td>
                 </tr>
                 <tr>
                     <td>Kaitlyn Allen</td>
@@ -215,7 +215,7 @@
                         <u>Return Type</u>: <samp>JSON file </samp> holding 16-day weather forecast
                     </td>
                     <td>This service returns a 16-day weather forecast for the area for Tempe, Arizona. The results are narrowed to only display five days.</td>
-                    <td><a class="btn btn-default" href="/TryItPages/WeatherTryIt">TryIt</a></td>
+                    <td><a class="btn btn-default" href="~/TryItPages/WeatherTryIt">TryIt</a></td>
                 </tr>
             </tbody>
         </table>
