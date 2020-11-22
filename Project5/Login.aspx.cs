@@ -10,10 +10,13 @@ using System.Web.UI.WebControls;
 using SecurityLibrary;
 
 /*********************************************************************
- * Shared code within this file, contributions are labeled in comments
- * Log In: Azaria Fowler
- * Hashing Password: Kaitlyn Allen
- * Register User: Kaitlyn Allen
+ *                  PROJECT 5 CONTRIBUTION
+ * Login.aspx - Azaria Fowler
+ * User Control - Azaria Fowler
+ * Log In Functionality - Azaria Fowler
+ * 
+ * Hashing Password - Kaitlyn Allen
+ * Register User - Kaitlyn Allen
  *********************************************************************/
 namespace Project5
 {

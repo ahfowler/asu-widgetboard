@@ -3,15 +3,25 @@ using System.Collections.Generic;
 using System.IO;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+/**********************************************
+ *             PROJECT 5 CONTRIBUTION
+ * 
+ * Dashboard.aspx - Azaria Fowler
+ * Stock build/Quote Widget - Azaria Fowler
+ * Phoenix Sun's Widget - Azaria Fowler
+ * Horoscope Widget - Azaria Fowler
+ * 
+ *  Weather Widget - Kaitlyn Allen
+ * News Widget - Kaitlyn Allen
+ * Horoscope Session Storage - Kaitlyn Allen
+ **********************************************/
 namespace Project5
 {
     public partial class About : Page
     {
-        bool submittedSign = false;
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Generate stock pairs file.
+            // Generate stock pairs file - Azaria Fowler.
             StockBuildAndQuote.ServiceClient proxy = new StockBuildAndQuote.ServiceClient();
             string stockPairsFilePath = proxy.stockBuild();
 
@@ -37,7 +47,7 @@ namespace Project5
                 Textfile.Close();
             }
 
-            // Dynamically create stocks widget
+            // Dynamically create stocks widget - Azaria Fowler
             for (int i = 0; i < stocks.Count; i++)
             {
                 TableRow r = new TableRow();
@@ -53,7 +63,7 @@ namespace Project5
                 Stocks.Rows.Add(r);
             }
 
-            // Dynamically create news widget
+            // Dynamically create news widget - Kaitlyn Allen
             NewsService.ServiceClient newsProxy = new NewsService.ServiceClient();
             var newsReport = newsProxy.GetNewsList();
             for (int i = 0; i < newsReport.Length; i++)
@@ -66,12 +76,12 @@ namespace Project5
 
                 c.Controls.Add(newsElement);
 
-                r.Cells.Add(c); // Add this cell to the row.
+                r.Cells.Add(c);
 
                 News.Rows.Add(r);
             }
 
-            // Dynamically create sun's schedule
+            // Dynamically create sun's schedule - Azaria Fowler
             PhoenixSunsSchedule.ServiceClient phoenixSunsProxy = new PhoenixSunsSchedule.ServiceClient();
             List<string> schedule = phoenixSunsProxy.getSchedule();
 
@@ -90,7 +100,7 @@ namespace Project5
                 SunsSchedule.Rows.Add(r);
             }
 
-            //dynamically build weather widget
+            //dynamically build weather widget - Kaitlyn Allen
             WeatherService.ServiceClient weatherProxy = new WeatherService.ServiceClient();
             var weatherForecast = weatherProxy.GetForecast();
             var todayWeather = weatherProxy.TodayForecast(weatherProxy.GetWeatherReport().daily);
@@ -102,7 +112,7 @@ namespace Project5
             Weather5.Text = weatherForecast[4];
 
             
-            // Initialize horoscope widget
+            // Initialize horoscope widget - Azaria Fowler
             DailyHoroscope.ServiceClient horoscopeProxy = new DailyHoroscope.ServiceClient();
             if(Session.Count != 0)
             {
@@ -122,9 +132,10 @@ namespace Project5
         }
             
 
+        
         protected void submitHoroscope_Click(object sender, EventArgs e)
         {
-            //zodiac session storage
+            //zodiac session storage - Kaitlyn Allen
             string num = Convert.ToString(Session.Count + 1);
             DailyHoroscope.ServiceClient horoscopeProxy = new DailyHoroscope.ServiceClient();
             horoscopeReading.Text = horoscopeProxy.getHoroscopeReading(horoscopeDropDown.Text);

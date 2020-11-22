@@ -9,7 +9,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
-
+/**********************************************
+ *             PROJECT 5 CONTRIBUTION
+ * 
+ * Settings.aspx - Kaitlyn Allen
+ * User Registration - Kaitlyn Allen
+ * Hash Password - Kaitlyn Allen
+ **********************************************/
 namespace Project5
 {
     public partial class Contact : Page
