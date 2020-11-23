@@ -19,7 +19,7 @@
                     <th colspan="4">The application is deployed at: <a href="http://webstrar29.fulton.asu.edu/Page10/Default.aspx">http://webstrar29.fulton.asu/Page10/Default.aspx</a></th>
                 </tr>
                 <tr>
-                    <th colspan="4">Percentage of Contribution: Azaria Fowler: 70% + Kaitlyn Allen: 30%</th>
+                    <th colspan="4">Percentage of Contribution: Azaria Fowler: 50% + Kaitlyn Allen: 50%</th>
                 </tr>
                 <tr>
                     <th>Provider Name</th>
@@ -151,7 +151,7 @@
                     <th colspan="5" style="text-align: center;background-color:#f8f8f8"><h3>Service Directory</h3></th>
                 </tr>
                 <tr>
-                    <th colspan="5">Percentage of Contribution: Azaria Fowler: 60% + Kaitlyn Allen: 40%</th>
+                    <th colspan="5">Percentage of Contribution: Azaria Fowler: 50% + Kaitlyn Allen: 50%</th>
                 </tr>
                 <tr>
                     <th>Provider Name</th>
